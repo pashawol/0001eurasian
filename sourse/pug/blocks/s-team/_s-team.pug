@@ -1,0 +1,70 @@
+mixin s-team()
+	// start s-team
+	+b.s-team.section#s-team.lazy-background&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 В&nbsp;строительстве вашего дома участвует  целая команда специалистов
+				+e.text Опыт каждого нашего сотрудника в&nbsp;проектировании  более 2х&nbsp;лет, в&nbsp;строительстве более 5&nbsp;лет.
+				
+			.row
+				.col-lg-4
+					+e.slider-head--js.swiper-container
+						.swiper-wrapper
+							mixin slide(i, t, p)
+								+e.slide-sm.swiper-slide
+									+e.img-wrap--sm
+										img.lazy(src="#" data-src=`img/team-sm-${i}.jpg`, alt="")
+									+e.text
+										+e.name--sm= t
+										+e.post--sm= p
+								// /+e.slide.swiper-slide
+							+slide('1','Андрей Владимирович','Генеральный директор')
+							+slide('2','Владимир Владимирович','Главный инженер')
+							+slide('3','Максим Александрович','Начальник ПТО')
+							+slide('4','Мария Юрьевна','Инженер ПТО')
+							+slide('5','Нурия Фамилия','Инженер-проектировщик')
+							+slide('6','Алексей Фамилия','Начальник УОР')
+							+slide('7','Иван Фамилия','Производитель работ')
+							+slide('8','Анна Фамилия','Начальник УПП')
+							+slide('9','Наталья Фамилия','Офис-менеджер')
+				.col-lg-8
+					+e.slider-body--js.swiper-container
+						.swiper-wrapper 
+							mixin sl( t, p)
+								+e.slide-body.swiper-slide.text-center
+									+e.img-wrap--lg
+										img.lazy(src="#" data-src=`img/team-lg-1.jpg`, alt="")
+									+e.text
+									
+										+e.name-lg= t
+										+e.post-lg= p
+									
+									+e.border
+										.row
+											.col-6
+												.strong Образование: 
+												| высшее строительное
+											
+											.col-6
+												.strong Стаж работы: 
+												| 12 лет
+									+e.caption &laquo;В&nbsp;нашей работе главное внимание к&nbsp;деталям, ведь из&nbsp;деталей складывается общее понимание задачи. объемов, материальных и&nbsp;физических обоснований&raquo;
+									//- block
+									+e.btn(href='#') Задать вопрос
+										div Андрею Владимировичу
+
+									+e.foot Андрей Владимирович ответит  
+										br
+										| в течении рабочего дня с 9:00 до 16:00
+								// /+e.slide.swiper-slide
+							+sl('Андрей Владимирович','Генеральный директор')
+							+sl('Владимир Владимирович','Главный инженер')
+							+sl('Максим Александрович','Начальник ПТО')
+							+sl('Мария Юрьевна','Инженер ПТО')
+							+sl('Нурия Фамилия','Инженер-проектировщик')
+							+sl('Алексей Фамилия','Начальник УОР')
+							+sl('Иван Фамилия','Производитель работ')
+							+sl('Анна Фамилия','Начальник УПП')
+							+sl('Наталья Фамилия','Офис-менеджер')
+						+arrow()
+	// end s-team

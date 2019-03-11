@@ -1,0 +1,51 @@
+mixin s-portfolio()
+	// start s-portfolio
+	+b.s-portfolio.section#s-portfolio.lazy-background&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 С&nbsp;2001 года сдали в&nbsp;эксплуатацию  более 500&nbsp;объектов. Их&nbsp;них 
+					|
+					span.text-primary 57&nbsp;жилых  
+					| 
+					| домов
+				+e.text Посмотрите некоторые из них
+			.resp-tabs-js
+				.row
+					.col-4.d-none.d-md-block
+						.resp-tabs-list
+							mixin item(t,p)
+								+e.tab-btn.resp-tab-btn
+									+e.title.strong= t
+									+e.small= p
+								// +e.tab-btn.resp-tab-btn
+							- for (var x = 0; x < 6; x++)
+								+item("Коттеджный дом  ","в пос. Звездный-2 ")
+							 
+					.col-md-8 
+						.resp-tabs-container
+							- for (var i = 0; i < 6; i++)
+								.resp-tabs-content
+									+e.title-head.d-none.d-md-block Коттедж в пос. Звездный-2, г. Магнитогорск
+										span= i
+									+e.slider-wrap
+										+e.slider--js.gal.swiper-container
+											.swiper-wrapper
+												- for (var x = 0; x < 3; x++)
+													+e.slide.swiper-slide
+														+e.img-wrap.img-bg.swiper-lazy( data-background="img/portfolio.jpg")
+															img.swiper-lazy(src="#" data-src="img/portfolio.jpg", alt="")
+															.swiper-lazy-preloader
+													// /+e.slide.swiper-slide
+										+arrow()
+									+e.group.row
+										+e.strong.col-auto Задача:
+										+e.text.col После покупки земельного участка долго искал Подрядчика на&nbsp;проектные работы и&nbsp;строительство. К&nbsp;сожалению, в&nbsp;городе чаще встречались бригады без всяких гарантий и&nbsp;ответственности.
+									
+									+e.group.row
+										+e.strong.col-auto Решение:
+										+e.text.col По&nbsp;совету старых трестовских (тр. Магнитострой) работников обратился в&nbsp;организацию ООО ПСК &laquo;Евразия&raquo;, которое, как мне сказали, укомплектовано опытными кадрами инженеров, прорабов
+									
+								// .resp-tabs-content
+						
+						// .resp-tabs-container
+	// end s-portfolio

@@ -1,0 +1,160 @@
+.footer {
+  background-color: #fdfdfd;
+  padding-bottom: 30px;
+  // padding-top: 20px;
+  &__logo{
+    display: block;
+    max-width: 240px;
+    min-width: 83px;
+    margin-bottom: 20px;
+    margin-left: -10px;
+  }
+  &__text{
+    color: #3a3a3a; 
+    font-size: $small;
+    font-weight: 400;
+    line-height: $h6-font-size;
+    // Text style for "Проектируе"
+    letter-spacing: 0.28px;
+    @include media-breakpoint-up(lg) {
+      
+      max-width: 270px;
+      &--head{
+        max-width: 200px;
+      }
+      margin-bottom: 20px;
+    }
+    margin-bottom: 10px;
+  }
+  .menu{
+    @include media-breakpoint-up(lg) {
+
+      width: 230px;
+    }
+    list-style-type: none;
+    padding-bottom: 1px;
+    &-item{
+      margin-bottom: 12px;
+    }
+    a{
+      color: #535353;
+      font-size: 15px;
+      text-decoration: none !important;
+      white-space: nowrap;
+      &:hover{
+        color: #f6b83f;
+      }
+    }
+  }
+  &__col{
+    @include media-breakpoint-up(lg) {
+
+      padding-top: 30px;
+    }
+    padding-top: 10px;
+  }
+  &__soc-title{
+    color: #535353;
+    font-weight: bold;
+    font-size: 15px;
+    max-width: 160px;
+    margin-bottom: 10px;
+  }
+  &__link-soc{
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+    color: #535353;
+    text-decoration: none !important;
+    .icon{
+      font-size: 27px;
+      margin-right: 10px;
+    }
+  }
+  &__title{
+    text-align: center;
+    color: #a5a5a5;
+    font-weight: 500;
+    font-size: 12px; 
+    line-height: $h6-font-size;
+    // Text style for "НАШИ ПАРТН"
+    letter-spacing: 0.24px;
+    margin-bottom: 20px;
+  }
+
+
+  &__develop{
+    text-align: center;
+    color: #595959;
+    font-size: 13px;
+    letter-spacing: 0.26px;
+    padding-top: 10px;
+    a{
+      color: #595959  ;
+      text-decoration: none !important;
+      &:hover{
+        color: #f6b83f;
+      }
+
+    }
+  }
+// 
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(xs) {}
+
+
+// 
+@include media-breakpoint-between(md, xl) {}
+
+
+// 
+@include media-breakpoint-only(xs) {}
+
+@include media-breakpoint-only(sm) {}
+
+@include media-breakpoint-only(md) {}
+
+@include media-breakpoint-only(lg) {}
+
+@include media-breakpoint-only(xl) {}
+
+
+// 
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {}
+
+@include media-breakpoint-down(md) {}
+
+@include media-breakpoint-down(sm) {}
+
+@include media-breakpoint-down(xs) {}
+}
+.patner-slider-wrap{
+
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 970px;
+}
+.patner-slider{
+  opacity: 0.6;
+  padding-bottom: 45px;
+  text-align: center;
+  .swiper-wrapper{
+    @include media-breakpoint-up(md) {
+      // justify-content: space-between;
+      // transform: translate3d(0px, 0px, 0px) !important;
+    }
+  }
+  &__slide{
+    width: auto;
+  
+  }
+}

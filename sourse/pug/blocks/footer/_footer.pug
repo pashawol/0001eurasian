@@ -1,0 +1,46 @@
+mixin footer()
+	+b.FOOTER.footer
+		.container
+			.row
+				.col-lg
+					+e.logo()
+						img.res-i.lazy(src="#" data-src="img/logo.png", alt="")
+					+e.text--head Проектируем и&nbsp;строим дома  с&nbsp;2001 года
+					+e.text &copy;&nbsp;Копирование и&nbsp;распространение  материалов с&nbsp;сайта, без письменного  согласия правообладателя запрещено.
+				+e.col.col-auto
+					ul.menu
+						li.menu-item: a(href="#") Одноэтажные дома
+						li.menu-item: a(href="#") Двухэтажные дома
+						li.menu-item: a(href="#") Классические дома
+						li.menu-item: a(href="#") Современные дома
+						li.menu-item: a(href="#") Мансардные дома
+						li.menu-item: a(href="#") Дома с гаражем
+
+				+e.col.col-auto
+					ul.menu
+						li.menu-item: a(href="#") до 100 кв.м. 
+						li.menu-item: a(href="#") 101 кв.м. — 150 кв.м.
+						li.menu-item: a(href="#") 151 кв.м. — 200 кв.м.
+						li.menu-item: a(href="#") 251 кв.м. — 300 кв.м.
+
+				+e.col.col-xl-3.col-auto
+					+e.soc-title Следите за нашими  новостями:
+					+e.link-soc(href="#")
+						+icon('instagram')
+						| в Instagram
+			
+			+e.title НАШИ ПАРТНЕРЫ:
+			.patner-slider-wrap
+				+b.patner-slider--js.swiper-container
+					.swiper-wrapper
+						mixin slide(i)
+							+e.slide.swiper-slide
+								img.lazy(src="#" data-src=`img/patner-${i}.jpg`, alt="")
+								block
+							// /+e.slide.swiper-slide
+						- for (var x = 1; x < 9; x++)
+							+slide(x)
+			+e.title ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
+			+e.develop Создание и продвижение сайта: 
+				|
+				a(href="http://studiobars.ru/" target="_blank") веб-студия «Барс»

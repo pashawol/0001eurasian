@@ -1,0 +1,23 @@
+mixin s-projects()
+	// start s-projects
+	+b.s-projects.section#s-projects.lazy-background&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 У вас еще нет проекта дома вашей мечты?
+				+e.text Выберите один или несколько проектов из&nbsp;каталога,  а&nbsp;мы&nbsp;поможем его адаптировать под ваш участок
+			.row
+				mixin item(i,t)
+					+e.col.col-lg-4.col-sm-6
+						+e.item(href="#")
+							+e.img-wrap.img-bg
+								img.res-i.lazy-bg(src="#" data-src=`img/project-${i}.jpg`, alt="")
+							+e.DIV.caption
+								+e.DIV.title= t
+					// /.col-lg-4.col-sm-6
+				+item('1','1-этажные дома')
+				+item('2','2-этажные дома')
+				+item('3','Классические дома')
+				+item('4','Современные дома')
+				+item('5','Мансардные дома')
+				+item('6','Дома с гаражем') 
+	// end s-projects

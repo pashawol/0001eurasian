@@ -1,0 +1,36 @@
+mixin s-director()
+	// start s-director
+	+b.s-director.section#s-director.lazy-background&attributes(attributes)
+		.container
+			.row
+				.col-lg-6.col-md-8
+					+b.section-title
+						h2  Вы&nbsp;думали строить дом  постепенно, разбивая работу 
+							|
+							| 
+							span.text-primary на&nbsp;несколько этапов?
+						
+					.h6 Проектированием занимаются одни,  фундамент заливают другие, строят дом третьи При возникновении недочетов, чаще всего, 
+						|
+						strong каждый будет переводить вину на&nbsp;других. 
+
+					.h6 По&nbsp;итогу вам будет не&nbsp;с&nbsp;кого спросить за&nbsp;результат.  Когда компания делает одна&nbsp;&mdash; 
+						|
+						strong вся ответственность лежит на&nbsp;ней!
+					.text-center
+						+e.btn(href='#') Задать вопрос
+							div Андрею Владимировичу
+
+						+e.foot Андрей Владимирович ответит  
+							br
+							| в течении рабочего дня с 9:00 до 16:00
+				.col.align-self-end
+					+e.right-block
+						+e.name-block
+							+e.name Андрей Владимирович
+							+e.post Генеральный дирекор
+								br
+								| ООО ПСК «Евразия»
+						+e.img-wrap
+							img.res-i.lazy(src="#" data-src="img/director.png", alt="")
+	// end s-director

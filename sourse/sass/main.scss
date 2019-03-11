@@ -1,0 +1,54 @@
+$output-bourbon-deprecation-warnings: false;
+// @import "mq";
+@import "bourbon";
+@import "vars";
+@import "bootstrap/bootstrap";
+// @import "../libs/animate";
+// @import "fontawesome-pro-5.0.8/web-fonts-with-css/scss/fontawesome";
+// @import "fontawesome-pro-5.0.8/web-fonts-with-css/scss/fa-brands";
+// @import "fontawesome-pro-5.0.8/web-fonts-with-css/scss/fa-regular";
+// @import "fontawesome-pro-5.0.8/web-fonts-with-css/scss/fa-solid";
+// @import "fontawesome-pro-5.0.8/web-fonts-with-css/scss/fa-light";
+// @import "../libs/magnificPopup/magnific-popup";
+@import "../libs/swiper/swiper.min.css";
+// @import "../libs/select2-4.0.6-rc.1/dist/css/select2.min";
+// @import "../libs/dropzone";
+// @import "../libs/gijgo-master/dist/combined/css/gijgo";
+// @import "../libs/gijgo-master/dist/combined/css/demo.min";
+// @import "../libs/slick/slick1";
+@import "../libs/ion.rangeSlider/css/ion.rangeSlider.min.css";
+@import "../libs/magnificPopup/magnific-popup.sass";
+@import "../libs/Easy-Responsive-Tab-Accordion-Control-Plugin-For-jQuery/easy-responsive-tabs.css";
+// @import "../libs/ion.rangeSlider-2.2.0/css/ion.rangeSlider.skinHTML5";
+
+@import "base";
+
+
+@import "../../public/img/svg/_sprite";
+
+@import "../pug/blocks/mixin-wrap/mixin-wrap";
+@import "../pug/blocks/form-wrap/form-wrap";
+@import "../pug/blocks/header/_header";
+@import "../pug/blocks/top-line/top-line";
+@import "../pug/blocks/top-nav/top-nav";
+
+
+@import "../pug/blocks/header-block/_header-block";
+@import "../pug/blocks/s-content/_s-content";
+@import "../pug/blocks/s-contact/_s-contact";
+
+@import "../pug/blocks/s-why/_s-why";
+@import "../pug/blocks/s-quiz/_s-quiz";
+@import "../pug/blocks/s-portfolio/_s-portfolio";
+@import "../pug/blocks/s-steps/_s-steps";
+@import "../pug/blocks/s-team/_s-team";
+@import "../pug/blocks/s-projects/_s-projects";
+@import "../pug/blocks/s-director/_s-director";
+@import "../pug/blocks/s-accord/_s-accord";
+@import "../pug/blocks/s-differ/_s-differ";
+
+@import "../pug/blocks/s-form/s-form";
+@import "../pug/blocks/footer/footer";
+@import "../pug/blocks/modal/modal";
+
+@import "media";// Всегда в конце

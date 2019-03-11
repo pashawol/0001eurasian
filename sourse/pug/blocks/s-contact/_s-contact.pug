@@ -1,0 +1,36 @@
+mixin s-contact()
+	// start s-contact
+	+b.s-contact.section#s-contact&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Приезжайте в наш офис, чтобы лично обсудить условия сотрудничества
+			+e.wrap: .row
+				.col-auto
+					+e.item.row 
+						.col-auto
+							img.lazy(src="#" data-src='img/mark.png', alt="")
+						.col
+							.strong Адрес офиса: 
+							| Магнитогорск,
+							br 
+							| ул. Комсомольская, 5
+				
+				.col-auto
+					+e.item.row 
+						.col-auto
+							img.lazy(src="#" data-src='img/tel.png', alt="")
+						.col
+							.strong Звоните нам:
+							a.text-body(href="tel:8(3519)23-20-20") 8 (3519) 23-20-20
+				
+				.col-auto
+					+e.item.row 
+						.col-auto
+							img.lazy(src="#" data-src='img/clock.png', alt="")
+						.col
+							.strong График работы: 
+							| Пн-Чт: с 8 до 17
+							br 
+							| Пт: с 8 до 16
+				
+	// end s-contact

@@ -1,0 +1,35 @@
+mixin s-differ()
+	// start s-differ
+	+b.s-differ.section#s-differ.lazy-background&attributes(attributes)
+		.container
+			.row
+				+e.col.col-lg-6.col-md-8
+					+b.section-title
+						h2  Чем «каменные» дома  отличаются от каркасных?
+						
+					.h6 Принципиальное отличие &laquo;каменных&raquo; домов  от&nbsp;каркасных в&nbsp;их&nbsp;надежности, долговечности. Срок их&nbsp;проектной эксплуатации более 
+						|
+						|
+						strong 50&nbsp;лет.
+
+					.h6 
+						strong Пожарная безопасность 
+						| каменного дома с&nbsp;железобетонным перекрытием&nbsp;&mdash; 
+						|
+						|
+						strong гораздо выше каркасного. 
+
+					.h6 Каркасные дома имеют гораздо меньший срок эксплуатации, их&nbsp;можно рассматривать как вынужденный малобюджетный вариант временного жилья, с&nbsp;перспективой дальнейшей перестройки. 
+
+					.h6 Строя дом, вы&nbsp;же 
+						|
+						|
+						strong хотите оставить его внукам?
+				.col.align-self-end.order-md-first
+					+e.right-block
+						+e.name-block
+							+e.name Владимир Владимирович
+							+e.post Главный инженер
+						+e.img-wrap
+							img.res-i.lazy(src="#" data-src="img/differ-img.png", alt="")
+	// end s-differ

@@ -1,0 +1,20 @@
+mixin header-block()
+	// start header-block
+	+b.header-block#header-block
+		.container
+			+e.block
+				h1 Заселяйтесь всей семьей  в&nbsp;теплый и&nbsp;надежный дом уже через год
+				.row
+					.col-auto
+						+e.item
+							+e.img-wrap
+								img.lazy(src="#" data-src="img/head-1.png", alt="")
+							+e.text Разработаем  индивидуальный  проект
+					
+					.col-auto
+						+e.item
+							+e.img-wrap
+								img.lazy(src="#" data-src="img/head-2.png", alt="")
+							+e.text Учтем  ваш бюджет  на&nbsp;строительство
+				+e.btn(href="#") Узнать стоимость будущего дома
+	// end header-block

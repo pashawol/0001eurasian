@@ -1,0 +1,168 @@
+mixin s-steps()
+	// start s-steps
+	+b.s-steps.section#s-steps.lazy-background&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Выполняем весь цикл работ от&nbsp;проектирования  до&nbsp;сдачи готового дома в&nbsp;эксплуатацию.
+				+e.text Технический отдел проверяет качество на каждом этапе строительства
+				
+			+e.slider-head--js.swiper-container.gallery-thumbs
+				.swiper-wrapper
+					mixin slide(i)
+						+e.slide-head.swiper-slide
+							img.lazy(src="#" data-src=`img/step-${i}.png`, alt="")
+							block
+						// /+e.slide.swiper-slide
+					+slide('1')
+						+e.text Подготовитеьлный этап
+					+slide('2')
+						+e.text Начало проектирования
+					+slide('3')
+						+e.text Строительство будущего дома
+					+slide('4')
+						+e.text Сдача дома в&nbsp;эксплуатацию
+		+e.slider-body--js.swiper-container.gallery-top
+			.swiper-wrapper
+				mixin sl()
+					+e.slide.swiper-slide
+						.container
+							block
+				
+					// /+e.slide.swiper-slide
+				
+				//- 1
+				+sl()
+					//- .row.align-items-center
+					.row
+						.col-lg-6
+							+e.title--pt Вы приезжаете на встречу к нам в офис
+							+e.group
+								p За&nbsp;чашкой чая поделитесь своими идеями, получите ценные советы, узнаете стоимость дома своей мечты.
+							+e.group
+								+e.border
+									p Познакомим вас со&nbsp;строителями, главным инженером, прорабом, проектировщиком. Покажем наши выполненные объекты.
+							+e.group--after
+								p Совместно с&nbsp;отделом проектирования и&nbsp;главным инженером&nbsp;&mdash; определим порядок действий и&nbsp;поставим цели.
+						.col
+							+form-wrap()
+								+e.head-title Запишитесь на&nbsp;встречу  в&nbsp;нашем офисе
+								input(type='hidden', class="order", name='Вид формы', value=`Запишитесь на встречу  в нашем офисе` ) 
+								+inputt('Введите удобный день и время','text','Например, среда, 12:00')(name='time')
+								+inputt('Укажите ваш телефон для связи','tel','Введите ваш телефон')(required name='tel')
+								+e.btn(type='submit') Записаться на встречу
+								+e.polite Нажимая кнопку &laquo;Записаться на&nbsp;встречу&raquo;, вы&nbsp;принимаете условия 
+									|
+									a(href="#" target="_blank") передачи данных
+								+e.foot
+									.row
+										.col-auto
+											+e.person: img.lazy(src="#" data-src='img/steps-gerl.png', alt='')
+											
+										.col В&nbsp;рабочее время.&nbsp;в&nbsp;течении 25&nbsp;минут,  вам позвонит офис-менеджер Наталья,  чтобы согласовать время встречи
+				//- 2
+				+sl()
+					.row
+						.col-lg-6
+							+e.group
+								+e.title Грамотно разработанный проект  	будущего дома&nbsp;&mdash; это&nbsp;80% успеха. 
+								+e.group
+									p Поэтому над ним будут работать специалисты  	с&nbsp;высшим техническим образованием. 
+
+								+e.group
+									p При проектировании вашего дома учитывается ряд факторов, таких как:
+									ul
+										li  Градостроительные требования
+										li Состав семьи
+										li   Расположение участка относительно сторон света
+										li   Расположение участка относительно сторон света
+									a(href="#").text-secondary.link-more Смотреть все
+								+e.group 
+									p
+										strong.d-block Поможем подобрать несколько вариантов проектов 
+										| с&nbsp;учетом ваших пожеланий. Вы&nbsp;останавливаетесь  на&nbsp;каком-то одном&nbsp;&mdash; над ним мы&nbsp;и&nbsp;будем работать.
+
+								+e.group 
+									p Если у&nbsp;вас уже есть свой проект&nbsp;&mdash; будем работать над ним.
+
+								+e.group 
+									+e.border
+										p
+											strong По&nbsp;итогу
+											|: вы&nbsp;получаете готовый проект, так&nbsp;же  мы&nbsp;поможем получить градостроительный план и&nbsp;разрешение на&nbsp;строительство.
+						.col-lg-6.gal
+							a(href="img/step-img-2.jpg").d-lg-block.d-none
+								img.res-i.lazy(src="#" data-src="img/step-img-2.jpg", alt="")
+							+e.group.col-xl-10.px-0 
+								p
+									strong Важно
+									|: на&nbsp;этапе проектирования уже учтены все расходы с&nbsp;точностью&nbsp;97%,  и&nbsp;отражены в&nbsp;смете, подкрепленной договором.
+									strong.d-block Поэтому цены во&nbsp;время строительства не&nbsp;изменятся.
+				//- 3
+				+sl()
+					.row
+						.col-lg-6
+							+e.group
+								+e.title.pb-3 Строительство состоит из&nbsp;нескольких  этапов, качество каждого контролирует  технический отдел.
+								+e.group
+									p 
+										strong.d-blokc Пока текущий этап работ не&nbsp;будет принят 
+										| &mdash;&nbsp;строители не&nbsp;продолжат работу
+								+e.group
+									p 
+										strong Вам не&nbsp;придется тратить личное время 
+										|
+										| на&nbsp;поиск поставщиков, самим определяться с&nbsp;качеством, объемом материалов, организовывать их&nbsp;доставку, разгрузку. 
+
+								+e.group
+									p 
+										strong Вы&nbsp;сэкономите на&nbsp;стоимости материалов
+										|, так как мы&nbsp;закупаем у&nbsp;наших постоянных поставщиков по&nbsp;ценам ниже розничных
+								+e.group 
+									p На&nbsp;каждом этапе 
+										| 
+										|
+										strong вы&nbsp;видите какой материал и&nbsp;в&nbsp;каком количестве куплен
+						.col-lg-6.gal
+							a(href="img/step-img-3.jpg").d-lg-block.d-none.mb-0
+								img.res-i.lazy(src="#" data-src="img/step-img-3.jpg", alt="")
+							+e.group
+								p Еженедельно вы&nbsp;будете получать фото отчет  с&nbsp;объекта строительства на&nbsp;вайбер ватсап или почту.
+				//- 4
+				+sl()
+					.row
+						.col-lg-6
+							+e.group
+								+e.title Приемка и&nbsp;оплата выполненных работ
+								+e.group
+									p Осуществляется 
+										| 
+										strong на&nbsp;основании согласованного проекта, сметы,
+										|
+										|  в&nbsp;которых определены стоимость работы, материалов.
+								+e.group
+									p 
+										strong Приемку осуществляет либо сам заказчик, либо привлеченные им специалисты,
+										|
+										| уполномоченные им осуществлять строительный контроль. При этом проверяются объемы и качество выполненных работ. приемку можно осуществлять поэтапно по договоренности сторон.  
+								+e.group 
+									p
+										strong Предварительная оплата по каждому этапу
+										|, либо за объект производятся в пределах стоиомости строительных материалов 
+										|
+										strong до начала работ. 
+						.col-lg-6.gal
+							a(href="img/step-img-4.jpg").d-lg-block.d-none
+								img.res-i.lazy(src="#" data-src="img/step-img-4.jpg", alt="")
+							+e.group
+								p У&nbsp;нас есть 
+									|
+									strong опыт работы на&nbsp;объектах,
+									|
+									| где строительный контроль осуществляется Техническим Заказчиком 
+									|
+									strong под надзором Государственного комитета
+									|
+									| по&nbsp;жилищному и&nbsp;строительному надзору.
+				
+			+arrow()
+	// end s-steps
