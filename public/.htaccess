@@ -5,6 +5,7 @@ AddType application/vnd.ms-fontobject .eot
 AddType application/x-font-ttf .ttf
 AddType application/x-font-opentype .otf
 AddType application/x-font-woff .woff
+AddType application/x-font-woff2 .woff2
 AddType image/svg+xml .svg
 
 # Compress compressible fonts

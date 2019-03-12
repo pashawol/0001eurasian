@@ -47,6 +47,8 @@ mixin s-steps()
 							+form-wrap()
 								+e.head-title Запишитесь на&nbsp;встречу  в&nbsp;нашем офисе
 								input(type='hidden', class="order", name='Вид формы', value=`Запишитесь на встречу  в нашем офисе` ) 
+								input(type="hidden" class='utm_source' name='utm_source')
+								input(type="hidden" class='utm_term' name='utm_term')
 								+inputt('Введите удобный день и время','text','Например, среда, 12:00')(name='time')
 								+inputt('Укажите ваш телефон для связи','tel','Введите ваш телефон')(required name='tel')
 								+e.btn.btn-js(type='submit') Записаться на встречу

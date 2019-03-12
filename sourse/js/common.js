@@ -481,7 +481,7 @@ $('[data-step="step-1"]').click(function(){
 	$('.floor').val($(this).parents('.swiper-slide').find('input:checked').val()); 
 })
 $('[data-step="step-2"]').click(function(){
-	$('.area').val($(this).parents('.swiper-slide').find('input').val() + 'м2'); 
+	$('.area').val($(this).parents('.swiper-slide').find('input').val() + ' м2'); 
 })
 $('[data-step="step-3"]').click(function(){
 	$('.overlap').val($(this).parents('.swiper-slide').find('input:checked').val()); 
@@ -490,10 +490,10 @@ $('[data-step="step-4"]').click(function(){
 	$('.fasade').val($(this).parents('.swiper-slide').find('input:checked').val()); 
 })
 $('[data-step="step-5"]').click(function(){
-	$('.price').val($(this).parents('.swiper-slide').find('input').val() + 'тыс. руб.'); 
+	$('.price').val($(this).parents('.swiper-slide').find('input').val() + ' тыс. руб.'); 
 })
 $('[data-step="step-6"]').click(function(){
-	$('.data').val($(this).parents('.swiper-slide').find('input').val() + 'мес.'); 
+	$('.data').val($(this).parents('.swiper-slide').find('input').val() + ' мес.'); 
 })
 
 
@@ -512,7 +512,7 @@ var gets = (function() {
 		var th = $(this);
 		th.find('.utm_source').val(gets['utm_source']);
 		th.find('.utm_term').val(gets['utm_term']);
-		
+
 		$.ajax({
 			type: "POST",
 			url: 'action.php', //Change
