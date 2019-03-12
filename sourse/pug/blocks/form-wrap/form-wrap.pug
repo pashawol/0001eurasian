@@ -8,11 +8,9 @@ mixin inputt(p ,  t , pl)
 			+e.SPAN.title= p
 			+e.INPUT.input.form-control(type= t placeholder= pl)&attributes(attributes)
 	// +e.input-wrap
-mixin input(p ,  t , pl)
-	+e.input-wrap.form-group
-		label
-			+e.SPAN.title= p
-			+e.INPUT.input.form-control(type= t placeholder= pl)&attributes(attributes)
+mixin input( t , pl)
+	+e.input-wrap.form-group 
+		+e.INPUT.input.form-control(type= t placeholder= pl)&attributes(attributes)
 	// +e.input-wrap
 
 mixin ta(p , pl)

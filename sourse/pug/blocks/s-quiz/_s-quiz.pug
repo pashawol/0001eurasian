@@ -9,6 +9,7 @@ mixin s-quiz()
 					.col
 						+e.text  и&nbsp;узнайте стоимость  вашего будущего дома
 						.small Время прохождения теста 1&nbsp;мин.
+			
 			+e.inner
 				.scr2__test
 					.scr2__test_in
@@ -32,7 +33,7 @@ mixin s-quiz()
 														br
 														| диретор
 												.col= p
-									mixin slide(t, p)
+									mixin slide(t, p, st)
 										.swiper-slide
 											.scr2__testttl= t
 											block
@@ -48,9 +49,10 @@ mixin s-quiz()
 															| диретор
 													.col= p
 											.scr2__next
-												button.button.jsNextQuest(disabled='') Следующий вопрос
+												button.button.btn-js.jsNextQuest(disabled='' data-step= st) Следующий вопрос
 										// /.swiper-slide
 									
+									//- 0
 									.swiper-slide
 										.scr2__testttl По результатам теста вы получите:
 										
@@ -70,69 +72,70 @@ mixin s-quiz()
 														small.strong 30&nbsp;000 рублей за&nbsp;экономию времени наших менеджров**
 														+e.small-text **При строительстве дома в&nbsp;нашей компании,  делается дополнительная в&nbsp;размере 30&nbsp;000 рублей от&nbsp;суммы основного договора
 										.scr2__next
-											button.button.btn-start.jsNextQuest( ) Пройти тест и узнать стоимость
+											button.button.btn-js.btn-start.jsNextQuest( ) Пройти тест и узнать стоимость
 												 
 												small.d-block вашего будущего дома
 									// /.swiper-slide
+									
 									//- 1
-									+slide('Выберите этажность своего будущего дома', '«Одноэтажный дом удобен отсутствием лестниц, которые представляют опасность для детей и неудобство для пожилых жильцов. При устройстве двухэтажного дома — остается больше прилегающей территории, на которой можно разместить дополнительные постройки, такие как баня, хоз. блок и другие»') 
+									+slide('Выберите этажность своего будущего дома', '«Одноэтажный дом удобен отсутствием лестниц, которые представляют опасность для детей и неудобство для пожилых жильцов. При устройстве двухэтажного дома — остается больше прилегающей территории, на которой можно разместить дополнительные постройки, такие как баня, хоз. блок и другие»','step-1') 
 										.scr2__ansers.row.justify-content-center
 											.col-sm-6.col-md-auto
 												label.scr2__imglabel
-													input(type='radio', name='quest1', value='quest1_1')
+													input(type='radio', name='quest1', value='Одноэтажный')
 													span.flexwrap
 														+e.SPAN.img-wrap: img.lazy(src="#" data-src='img/quiz-step-1-1.png', alt='')
 														small Одноэтажный
 											.col-sm-6.col-md-auto
 												label.scr2__imglabel
-													input(type='radio', name='quest1', value='quest1_2')
+													input(type='radio', name='quest1', value='Двухэтажный')
 													span.flexwrap
 														+e.SPAN.img-wrap: img.lazy(src="#" data-src='img/quiz-step-1-2.png', alt='')
 														small Двухэтажный
 									//- 2
-									+slide('Выберите площадь своего будущего дома', '«Цена зависит не только от площади дома. Есть проекты, где дом 119 метров и 217 стоят одинаково. Важно еще учесть личные предпочтения. Отделка, ремонт, мебель — тоже стоят денег»') 
+									+slide('Выберите площадь своего будущего дома', '«Цена зависит не только от площади дома. Есть проекты, где дом 119 метров и 217 стоят одинаково. Важно еще учесть личные предпочтения. Отделка, ремонт, мебель — тоже стоят денег»','step-2') 
 										+b.range-block
 											+e.value
 											+e.INPUT.input--js.js-range-slider(type="text" name="range-1" data-min="10"  data-max="1000"    data-step='10' data-postfix=' м2')
 									//- 3
-									+slide('Выберите тип перекрытия', '«У железобетонного перекрытия лучше противопожарные свойства и звукоизоляция, а так же выше скорость монтажа. При устройстве деревянного перекрытия  — вы экономите значительную часть средств»') 
+									+slide('Выберите тип перекрытия', '«У железобетонного перекрытия лучше противопожарные свойства и звукоизоляция, а так же выше скорость монтажа. При устройстве деревянного перекрытия  — вы экономите значительную часть средств»','step-3') 
 										.scr2__ansers.row.justify-content-center
 											.col-sm-6.col-md-auto
 												label.scr2__imglabel
-													input(type='radio', name='quest3', value='quest3_1')
+													input(type='radio', name='quest3', value='деревянное')
 													span.flexwrap
 														+e.SPAN.img-wrap: img.lazy(src="#" data-src='img/quiz-step-3-1.png', alt='')
 														small Деревянное
 											.col-sm-6.col-md-auto
 												label.scr2__imglabel
-													input(type='radio', name='quest3', value='quest3_2')
+													input(type='radio', name='quest3', value='Железобетонное')
 													span.flexwrap
 														+e.SPAN.img-wrap: img.lazy(src="#" data-src='img/quiz-step-3-2.png', alt='')
 														small Железобетонное
 									//- 4
-									+slide('Выберите тип фасада', 'Облицовочный кирпич дорогой, но долговечный — дом будет смотреться красиво  и богато. Штукатурка может быть любого цвета и фактуры, минусом является обслуживание через определенное время. Навесной фасад —самый бюджетный вариант, скорость его монтажа гораздо выше. Возможен монтаж в зимний период.') 
+									+slide('Выберите тип фасада', 'Облицовочный кирпич дорогой, но долговечный — дом будет смотреться красиво  и богато. Штукатурка может быть любого цвета и фактуры, минусом является обслуживание через определенное время. Навесной фасад —самый бюджетный вариант, скорость его монтажа гораздо выше. Возможен монтаж в зимний период.','step-4') 
 										.scr2__ansers.row.justify-content-center
 											.col-sm-6.col-md-auto
 												label.scr2__imglabel
-													input(type='radio', name='quest4', value='quest4_1')
+													input(type='radio', name='quest4', value='Облицовочный кирпич')
 													span.flexwrap
 														+e.SPAN.img-wrap: img.lazy(src="#" data-src='img/quiz-step-4-1.png', alt='')
 														small Облицовочный кирпич
 											.col-sm-6.col-md-auto
 												label.scr2__imglabel
-													input(type='radio', name='quest4', value='quest4_2')
+													input(type='radio', name='quest4', value='Штукатурка')
 													span.flexwrap
 														+e.SPAN.img-wrap: img.lazy(src="#" data-src='img/quiz-step-4-2.png', alt='')
 														small Штукатурка
 											.col-sm-6.col-md-auto
 												label.scr2__imglabel
-													input(type='radio', name='quest4', value='quest4_3')
+													input(type='radio', name='quest4', value='Навесной (сайдинг)')
 													span.flexwrap
 														+e.SPAN.img-wrap: img.lazy(src="#" data-src='img/quiz-step-4-3.png', alt='')
 														small Навесной (сайдинг)
 
 									//- 5
-									+slide('Какой бюджет планируете на строительство?', '«В зависимости от бюджета, мы предложим оптимальный проект вашего будущего дома, планировку, материалы стен, крыши и другое»') 
+									+slide('Какой бюджет планируете на строительство?', '«В зависимости от бюджета, мы предложим оптимальный проект вашего будущего дома, планировку, материалы стен, крыши и другое»','step-5') 
 										+b.range-block
 											+e.value
 											+e.INPUT.input--js.js-range-slider(type="text" name="range-2" data-min="1000 "  data-max="20000"    data-step='500' data-postfix=' тыс. руб.')
@@ -156,10 +159,12 @@ mixin s-quiz()
 															| диретор
 													.col «Стоимость строительных материалов и работ постоянно растет, в зависимости  от примерного срока начала строительства — мы просчитаем стоимость дома  по актуальным на данный период ценам»
 										.scr2__next
-											a.button.jsEnd(href="#" disabled='') Завершить тест
+											a.button.btn-js.jsEnd.popup-with-move-anim(href="#modal-sm" disabled='' data-step="step-6") Завершить тест
 									// /.swiper-slide
 									
+									
 					// /scr2__test_in
+					 
 				// /scr2__test
 
 	// end s-quiz

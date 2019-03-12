@@ -145,57 +145,16 @@ jQuery(document).ready(function ($) {
 
 
 	// листалка по стр
-	// $(" .top-nav a").click(function () {
-	//        var elementClick = $(this).attr("href");
-	//        var destination = $(elementClick).offset().top;
+	$(" .scroll-link").click(function () {
+	       var elementClick = $(this).attr("href");
+	       var destination = $(elementClick).offset().top;
 
-	//            $('html, body').animate({ scrollTop: destination }, 1100);
+	           $('html, body').animate({ scrollTop: destination }, 1100);
 
-	//        return false;
-	//    });
+	       return false;
+	   });
 
-
-	// табы  . 
-	function tabscostume(tab) {
-		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this)
-				.addClass('active').siblings().removeClass('active')
-				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn().addClass('active');
-
-		});
-	};
-	tabscostume('tabs');
-
-
-
-	var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
-
-	var arrl2 = (' <div class="r">' + icon),
-		arrr2 = (' <div class="l">' + icon);
-
-	// slider
-	// var swiper4 = new Swiper('.color-slider', {
-	// 	// slidesPerView: 5,
-	// 	slidesPerView: 'auto',
-	// 	watchOverflow: true,
-	// 	spaceBetween: 0,
-	// 	freeMode: true,
-	// 	watchOverflow: true,
-	// 	slidesPerGroup: 3,
-
-	// 	// centeredSlides: true,
-	// 	loop: true,
-	// 	loopFillGroupWithBlank: true,
-	// 	touchRatio: 0.2,
-	// 	slideToClickedSlide: true,
-	// 	freeModeMomentum: true,
-	// 	navigation: {
-	// 		nextEl: '.swiper-button-next',
-	// 		prevEl: '.swiper-button-prev',
-	// 	},
-
-	// });
+ 
 	// modal window
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'inline',
@@ -238,31 +197,7 @@ jQuery(document).ready(function ($) {
 	})
 	// /modal галерея
 
-	// form
-	$("form").submit(function () { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: 'action.php', //Change
-			data: th.serialize()
-		}).success(function () {
-			$.magnificPopup.close();
-			$.magnificPopup.open({
-				items: {
-					src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
-					type: 'inline'
-				}
-			})
-			// window.location.replace("/thanks.html");
-			setTimeout(function () {
-				// Done Functions
-				th.trigger("reset");
-				// $.magnificPopup.close();
-			}, 4000);
-		});
-		return false;
-	});
-	// /form
+
 
 	$('input[type="tel"]').attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+7(999)999-99-99");
 
@@ -512,4 +447,99 @@ jQuery(document).ready(function ($) {
 			}
 		}
 	});
+
+	$(".btn-js").each(function() {
+		var B = $(this);
+		var A, C, z, D;
+		setInterval(function() {
+				if (B.find(".animate-js").length === 0) {
+						B.prepend("<span class='animate-js'></span>");
+				}
+				A = B.find(".animate-js");
+				A.removeClass("btn_animate");
+				if (!A.height() && !A.width()) {
+						C = Math.max(B.outerWidth(), B.outerHeight());
+						A.css({
+								height: C,
+								width: C
+						});
+				}
+				z = Math.round(Math.random() * A.width() - A.width() / 2);
+				D = Math.round(Math.random() * A.height() - A.height() / 2);
+				A.css({
+						top: D + "px",
+						left: z + "px"
+				}).addClass("btn_animate");
+		}, 3000);
+});
+
+$('.custom-input__input').change(function(){
+	$(this).parents('form').find('.toggle-block').slideToggle().toggleClass('active');
+})
+
+$('[data-step="step-1"]').click(function(){
+	$('.floor').val($(this).parents('.swiper-slide').find('input:checked').val()); 
+})
+$('[data-step="step-2"]').click(function(){
+	$('.area').val($(this).parents('.swiper-slide').find('input').val() + 'м2'); 
+})
+$('[data-step="step-3"]').click(function(){
+	$('.overlap').val($(this).parents('.swiper-slide').find('input:checked').val()); 
+})
+$('[data-step="step-4"]').click(function(){
+	$('.fasade').val($(this).parents('.swiper-slide').find('input:checked').val()); 
+})
+$('[data-step="step-5"]').click(function(){
+	$('.price').val($(this).parents('.swiper-slide').find('input').val() + 'тыс. руб.'); 
+})
+$('[data-step="step-6"]').click(function(){
+	$('.data').val($(this).parents('.swiper-slide').find('input').val() + 'мес.'); 
+})
+
+
+var gets = (function() {
+	var a = window.location.search;
+	var b = new Object();
+	a = a.substring(1).split("&");
+	for (var i = 0; i < a.length; i++) {
+	c = a[i].split("=");
+			b[c[0]] = c[1];
+	}
+	return b;
+})();
+	// form
+	$("form").submit(function () { //Change
+		var th = $(this);
+		th.find('.utm_source').val(gets['utm_source']);
+		th.find('.utm_term').val(gets['utm_term']);
+		
+		$.ajax({
+			type: "POST",
+			url: 'action.php', //Change
+			data: th.serialize()
+		}).success(function () {
+			$.magnificPopup.close();
+			$.magnificPopup.open({
+				items: {
+					src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
+					type: 'inline'
+				}
+			})
+			// window.location.replace("/thanks.html");
+			setTimeout(function () {
+				// Done Functions
+				th.trigger("reset");
+				// $.magnificPopup.close();
+			}, 4000);
+		});
+		return false;
+	});
+	// /form
+
+
+	// show hidden li
+	$('.link-more').click(function(e){
+		e.preventDefault();
+		$(this).hide().prev().find('li:hidden').slideDown();
+	})
 });

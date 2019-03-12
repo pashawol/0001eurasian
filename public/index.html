@@ -39,7 +39,7 @@
                       <use xlink:href="img/svg/sprite.svg#tel"></use>
                     </svg></span></a>
                   </div>
-                  <div class="col-auto"><a class="top-line__btn" href="#"> <span class="top-line__text">Заказать звонок</span><span class="top-line__icon-wrap">
+                  <div class="col-auto"><a class="top-line__btn btn-js popup-with-move-anim" href="#modal-call"> <span class="top-line__text">Заказать звонок</span><span class="top-line__icon-wrap">
                     <svg class="icon icon-email ">
                       <use xlink:href="img/svg/sprite.svg#email"></use>
                     </svg></span></a>
@@ -72,7 +72,7 @@
                     </div>
                   </div>
                 </div>
-              </div><a class="header-block__btn" href="#">Узнать стоимость будущего дома</a>
+              </div><a class="header-block__btn btn-js scroll-link" href="#s-quiz">Узнать стоимость будущего дома</a>
             </div>
           </div>
         </div>
@@ -183,7 +183,7 @@
                           </div>
                         </div>
                         <div class="scr2__next">
-                          <button class="button btn-start jsNextQuest">Пройти тест и узнать стоимость<small class="d-block">вашего будущего дома</small></button>
+                          <button class="button btn-js btn-start jsNextQuest">Пройти тест и узнать стоимость<small class="d-block">вашего будущего дома</small></button>
                         </div>
                       </div>
                       <!-- /.swiper-slide-->
@@ -192,12 +192,12 @@
                                   <div class="scr2__ansers row justify-content-center">
                                     <div class="col-sm-6 col-md-auto">
                                       <label class="scr2__imglabel">
-                                        <input type="radio" name="quest1" value="quest1_1"/><span class="flexwrap"><span class="s-quiz__img-wrap"><img class="lazy" src="#" data-src="img/quiz-step-1-1.png" alt=""/></span><small>Одноэтажный</small></span>
+                                        <input type="radio" name="quest1" value="Одноэтажный"/><span class="flexwrap"><span class="s-quiz__img-wrap"><img class="lazy" src="#" data-src="img/quiz-step-1-1.png" alt=""/></span><small>Одноэтажный</small></span>
                                       </label>
                                     </div>
                                     <div class="col-sm-6 col-md-auto">
                                       <label class="scr2__imglabel">
-                                        <input type="radio" name="quest1" value="quest1_2"/><span class="flexwrap"><span class="s-quiz__img-wrap"><img class="lazy" src="#" data-src="img/quiz-step-1-2.png" alt=""/></span><small>Двухэтажный</small></span>
+                                        <input type="radio" name="quest1" value="Двухэтажный"/><span class="flexwrap"><span class="s-quiz__img-wrap"><img class="lazy" src="#" data-src="img/quiz-step-1-2.png" alt=""/></span><small>Двухэтажный</small></span>
                                       </label>
                                     </div>
                                   </div>
@@ -215,7 +215,7 @@
                                     </div>
                                   </div>
                                   <div class="scr2__next">
-                                    <button class="button jsNextQuest" disabled="">Следующий вопрос</button>
+                                    <button class="button btn-js jsNextQuest" disabled="" data-step="step-1">Следующий вопрос</button>
                                   </div>
                                 </div>
                                 <!-- /.swiper-slide-->
@@ -239,7 +239,7 @@
                                     </div>
                                   </div>
                                   <div class="scr2__next">
-                                    <button class="button jsNextQuest" disabled="">Следующий вопрос</button>
+                                    <button class="button btn-js jsNextQuest" disabled="" data-step="step-2">Следующий вопрос</button>
                                   </div>
                                 </div>
                                 <!-- /.swiper-slide-->
@@ -248,12 +248,12 @@
                                   <div class="scr2__ansers row justify-content-center">
                                     <div class="col-sm-6 col-md-auto">
                                       <label class="scr2__imglabel">
-                                        <input type="radio" name="quest3" value="quest3_1"/><span class="flexwrap"><span class="s-quiz__img-wrap"><img class="lazy" src="#" data-src="img/quiz-step-3-1.png" alt=""/></span><small>Деревянное</small></span>
+                                        <input type="radio" name="quest3" value="деревянное"/><span class="flexwrap"><span class="s-quiz__img-wrap"><img class="lazy" src="#" data-src="img/quiz-step-3-1.png" alt=""/></span><small>Деревянное</small></span>
                                       </label>
                                     </div>
                                     <div class="col-sm-6 col-md-auto">
                                       <label class="scr2__imglabel">
-                                        <input type="radio" name="quest3" value="quest3_2"/><span class="flexwrap"><span class="s-quiz__img-wrap"><img class="lazy" src="#" data-src="img/quiz-step-3-2.png" alt=""/></span><small>Железобетонное</small></span>
+                                        <input type="radio" name="quest3" value="Железобетонное"/><span class="flexwrap"><span class="s-quiz__img-wrap"><img class="lazy" src="#" data-src="img/quiz-step-3-2.png" alt=""/></span><small>Железобетонное</small></span>
                                       </label>
                                     </div>
                                   </div>
@@ -271,7 +271,7 @@
                                     </div>
                                   </div>
                                   <div class="scr2__next">
-                                    <button class="button jsNextQuest" disabled="">Следующий вопрос</button>
+                                    <button class="button btn-js jsNextQuest" disabled="" data-step="step-3">Следующий вопрос</button>
                                   </div>
                                 </div>
                                 <!-- /.swiper-slide-->
@@ -280,17 +280,17 @@
                                   <div class="scr2__ansers row justify-content-center">
                                     <div class="col-sm-6 col-md-auto">
                                       <label class="scr2__imglabel">
-                                        <input type="radio" name="quest4" value="quest4_1"/><span class="flexwrap"><span class="s-quiz__img-wrap"><img class="lazy" src="#" data-src="img/quiz-step-4-1.png" alt=""/></span><small>Облицовочный кирпич</small></span>
+                                        <input type="radio" name="quest4" value="Облицовочный кирпич"/><span class="flexwrap"><span class="s-quiz__img-wrap"><img class="lazy" src="#" data-src="img/quiz-step-4-1.png" alt=""/></span><small>Облицовочный кирпич</small></span>
                                       </label>
                                     </div>
                                     <div class="col-sm-6 col-md-auto">
                                       <label class="scr2__imglabel">
-                                        <input type="radio" name="quest4" value="quest4_2"/><span class="flexwrap"><span class="s-quiz__img-wrap"><img class="lazy" src="#" data-src="img/quiz-step-4-2.png" alt=""/></span><small>Штукатурка</small></span>
+                                        <input type="radio" name="quest4" value="Штукатурка"/><span class="flexwrap"><span class="s-quiz__img-wrap"><img class="lazy" src="#" data-src="img/quiz-step-4-2.png" alt=""/></span><small>Штукатурка</small></span>
                                       </label>
                                     </div>
                                     <div class="col-sm-6 col-md-auto">
                                       <label class="scr2__imglabel">
-                                        <input type="radio" name="quest4" value="quest4_3"/><span class="flexwrap"><span class="s-quiz__img-wrap"><img class="lazy" src="#" data-src="img/quiz-step-4-3.png" alt=""/></span><small>Навесной (сайдинг)</small></span>
+                                        <input type="radio" name="quest4" value="Навесной (сайдинг)"/><span class="flexwrap"><span class="s-quiz__img-wrap"><img class="lazy" src="#" data-src="img/quiz-step-4-3.png" alt=""/></span><small>Навесной (сайдинг)</small></span>
                                       </label>
                                     </div>
                                   </div>
@@ -308,7 +308,7 @@
                                     </div>
                                   </div>
                                   <div class="scr2__next">
-                                    <button class="button jsNextQuest" disabled="">Следующий вопрос</button>
+                                    <button class="button btn-js jsNextQuest" disabled="" data-step="step-4">Следующий вопрос</button>
                                   </div>
                                 </div>
                                 <!-- /.swiper-slide-->
@@ -332,7 +332,7 @@
                                     </div>
                                   </div>
                                   <div class="scr2__next">
-                                    <button class="button jsNextQuest" disabled="">Следующий вопрос</button>
+                                    <button class="button btn-js jsNextQuest" disabled="" data-step="step-5">Следующий вопрос</button>
                                   </div>
                                 </div>
                                 <!-- /.swiper-slide-->
@@ -355,7 +355,7 @@
                             <div class="col">«Стоимость строительных материалов и работ постоянно растет, в зависимости  от примерного срока начала строительства — мы просчитаем стоимость дома  по актуальным на данный период ценам»</div>
                           </div>
                         </div>
-                        <div class="scr2__next"><a class="button jsEnd" href="#" disabled="">Завершить тест</a></div>
+                        <div class="scr2__next"><a class="button btn-js jsEnd popup-with-move-anim" href="#modal-sm" disabled="" data-step="step-6">Завершить тест</a></div>
                       </div>
                       <!-- /.swiper-slide-->
                     </div>
@@ -813,7 +813,7 @@
                             </label>
                           </div>
                           <!-- +e.input-wrap-->
-                          <button class="form-wrap__btn" type="submit">Записаться на встречу
+                          <button class="form-wrap__btn btn-js" type="submit">Записаться на встречу
                           </button>
                           <div class="form-wrap__polite">
                             Нажимая кнопку &laquo;Записаться на&nbsp;встречу&raquo;, вы&nbsp;принимаете условия <a href="#" target="_blank">передачи данных</a>
@@ -1100,7 +1100,7 @@
                         </div>
                       </div>
                       <div class="s-team__caption">&laquo;В&nbsp;нашей работе главное внимание к&nbsp;деталям, ведь из&nbsp;деталей складывается общее понимание задачи. объемов, материальных и&nbsp;физических обоснований&raquo;
-                      </div><a class="s-team__btn" href="#">Задать вопрос
+                      </div><a class="s-team__btn btn-js" href="#">Задать вопрос
                       <div>Андрею Владимировичу</div></a>
                       <div class="s-team__foot">Андрей Владимирович ответит  <br/>в течении рабочего дня с 9:00 до 16:00
                       </div>
@@ -1126,7 +1126,7 @@
                         </div>
                       </div>
                       <div class="s-team__caption">&laquo;В&nbsp;нашей работе главное внимание к&nbsp;деталям, ведь из&nbsp;деталей складывается общее понимание задачи. объемов, материальных и&nbsp;физических обоснований&raquo;
-                      </div><a class="s-team__btn" href="#">Задать вопрос
+                      </div><a class="s-team__btn btn-js" href="#">Задать вопрос
                       <div>Андрею Владимировичу</div></a>
                       <div class="s-team__foot">Андрей Владимирович ответит  <br/>в течении рабочего дня с 9:00 до 16:00
                       </div>
@@ -1152,7 +1152,7 @@
                         </div>
                       </div>
                       <div class="s-team__caption">&laquo;В&nbsp;нашей работе главное внимание к&nbsp;деталям, ведь из&nbsp;деталей складывается общее понимание задачи. объемов, материальных и&nbsp;физических обоснований&raquo;
-                      </div><a class="s-team__btn" href="#">Задать вопрос
+                      </div><a class="s-team__btn btn-js" href="#">Задать вопрос
                       <div>Андрею Владимировичу</div></a>
                       <div class="s-team__foot">Андрей Владимирович ответит  <br/>в течении рабочего дня с 9:00 до 16:00
                       </div>
@@ -1178,7 +1178,7 @@
                         </div>
                       </div>
                       <div class="s-team__caption">&laquo;В&nbsp;нашей работе главное внимание к&nbsp;деталям, ведь из&nbsp;деталей складывается общее понимание задачи. объемов, материальных и&nbsp;физических обоснований&raquo;
-                      </div><a class="s-team__btn" href="#">Задать вопрос
+                      </div><a class="s-team__btn btn-js" href="#">Задать вопрос
                       <div>Андрею Владимировичу</div></a>
                       <div class="s-team__foot">Андрей Владимирович ответит  <br/>в течении рабочего дня с 9:00 до 16:00
                       </div>
@@ -1204,7 +1204,7 @@
                         </div>
                       </div>
                       <div class="s-team__caption">&laquo;В&nbsp;нашей работе главное внимание к&nbsp;деталям, ведь из&nbsp;деталей складывается общее понимание задачи. объемов, материальных и&nbsp;физических обоснований&raquo;
-                      </div><a class="s-team__btn" href="#">Задать вопрос
+                      </div><a class="s-team__btn btn-js" href="#">Задать вопрос
                       <div>Андрею Владимировичу</div></a>
                       <div class="s-team__foot">Андрей Владимирович ответит  <br/>в течении рабочего дня с 9:00 до 16:00
                       </div>
@@ -1230,7 +1230,7 @@
                         </div>
                       </div>
                       <div class="s-team__caption">&laquo;В&nbsp;нашей работе главное внимание к&nbsp;деталям, ведь из&nbsp;деталей складывается общее понимание задачи. объемов, материальных и&nbsp;физических обоснований&raquo;
-                      </div><a class="s-team__btn" href="#">Задать вопрос
+                      </div><a class="s-team__btn btn-js" href="#">Задать вопрос
                       <div>Андрею Владимировичу</div></a>
                       <div class="s-team__foot">Андрей Владимирович ответит  <br/>в течении рабочего дня с 9:00 до 16:00
                       </div>
@@ -1256,7 +1256,7 @@
                         </div>
                       </div>
                       <div class="s-team__caption">&laquo;В&nbsp;нашей работе главное внимание к&nbsp;деталям, ведь из&nbsp;деталей складывается общее понимание задачи. объемов, материальных и&nbsp;физических обоснований&raquo;
-                      </div><a class="s-team__btn" href="#">Задать вопрос
+                      </div><a class="s-team__btn btn-js" href="#">Задать вопрос
                       <div>Андрею Владимировичу</div></a>
                       <div class="s-team__foot">Андрей Владимирович ответит  <br/>в течении рабочего дня с 9:00 до 16:00
                       </div>
@@ -1282,7 +1282,7 @@
                         </div>
                       </div>
                       <div class="s-team__caption">&laquo;В&nbsp;нашей работе главное внимание к&nbsp;деталям, ведь из&nbsp;деталей складывается общее понимание задачи. объемов, материальных и&nbsp;физических обоснований&raquo;
-                      </div><a class="s-team__btn" href="#">Задать вопрос
+                      </div><a class="s-team__btn btn-js" href="#">Задать вопрос
                       <div>Андрею Владимировичу</div></a>
                       <div class="s-team__foot">Андрей Владимирович ответит  <br/>в течении рабочего дня с 9:00 до 16:00
                       </div>
@@ -1308,7 +1308,7 @@
                         </div>
                       </div>
                       <div class="s-team__caption">&laquo;В&nbsp;нашей работе главное внимание к&nbsp;деталям, ведь из&nbsp;деталей складывается общее понимание задачи. объемов, материальных и&nbsp;физических обоснований&raquo;
-                      </div><a class="s-team__btn" href="#">Задать вопрос
+                      </div><a class="s-team__btn btn-js" href="#">Задать вопрос
                       <div>Андрею Владимировичу</div></a>
                       <div class="s-team__foot">Андрей Владимирович ответит  <br/>в течении рабочего дня с 9:00 до 16:00
                       </div>
@@ -1401,7 +1401,7 @@
                 Проектированием занимаются одни,  фундамент заливают другие, строят дом третьи При возникновении недочетов, чаще всего, <strong>каждый будет переводить вину на&nbsp;других. </strong></div>
               <div class="h6">
                 По&nbsp;итогу вам будет не&nbsp;с&nbsp;кого спросить за&nbsp;результат.  Когда компания делает одна&nbsp;&mdash; <strong>вся ответственность лежит на&nbsp;ней!</strong></div>
-              <div class="text-center"><a class="s-director__btn" href="#">Задать вопрос
+              <div class="text-center"><a class="s-director__btn btn-js popup-with-move-anim" href="#modal-call3">Задать вопрос
                 <div>Андрею Владимировичу</div></a>
                 <div class="s-director__foot">Андрей Владимирович ответит  <br/>в течении рабочего дня с 9:00 до 16:00
                 </div>
@@ -1563,7 +1563,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col"><a class="s-accord__btn" href="#">Задать вопрос</a>
+              <div class="col"><a class="s-accord__btn btn-js popup-with-move-anim" href="#modal-call2">Задать вопрос</a>
               </div>
             </div>
           </div>
@@ -1722,30 +1722,147 @@
         </div>
       </footer>
     </div>
+    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-sm">
+      <form>
+        <div class="row no-gutters">
+          <div class="col">
+            <div class="form-wrap__modal-head">
+              <div class="form-wrap__title">Мы получили ваши ответы
+              </div>
+              <div class="form-wrap__text form-wrap__text--js text-secondary">Для расчета стоимости требуется от 10 до 30 минут
+              </div>
+              <div class="form-wrap__text form-wrap__text--js">Офис-менеджер  Наталья свяжется с вами по указанному номеру и сообщит примерную стоимость.
+              </div>
+              <p>Также за&nbsp;номером телефона закрепится скидка  в&nbsp;30&nbsp;000 рублей* и&nbsp;подарок&nbsp;&mdash; проект будущего дома*!</p>
+              <div class="small text-secondary">*При строительстве дома в нашей компании</div>
+            </div>
+            <input class="utm_source" type="hidden" name="utm_source"/>
+            <input class="utm_term" type="hidden" name="utm_term"/>
+            <input class="order" type="hidden" name="order" value="Форма в квизе"/>
+            <input class="floor" type="text" name="floor"/>
+            <input class="area" type="text" name="area"/>
+            <input class="overlap" type="text" name="overlap"/>
+            <input class="fasade" type="text" name="fasade"/>
+            <input class="price" type="text" name="price"/>
+            <input class="data" type="text" name="data"/>
+            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="tel" placeholder="Введите ваш телефон" required="required" name="tel"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <label class="custom-input2"><input class="custom-input2__input" type="checkbox" name="sms" value="Да"/><span class="custom-input2__lab"></span><span class="custom-input2__text">Не могу говорить. Отправьте СМС</span>
+            </label>
+            <div class="toggle-block">
+              <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Например, среда, 12:00" name="time"/>
+              </div>
+              <!-- +e.input-wrap-->
+            </div>
+            <button class="form-wrap__btn btn-js" type="submit">Заказать звонок
+            </button>
+            <div class="toggle-block active">
+              <div class="form-wrap__polite text-center">
+                Нажимая кнопку &laquo;Заказать звонок&raquo;, вы соглашаетесь с <a class="tdu" href="#" target="_blank">условиями передачи дайнных</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 img-bg d-none d-lg-block"><img class="lazy-bg" src="#" data-src="img/quiz.jpg" alt=""/></div>
+        </div>
+      </form>
+    </div>
+    <!-- #modal-sm-->
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
       <form>
-        <div class="text-center">
-          <div class="form-wrap__title h3 ttu">Обратный звонок
+        <div class="row no-gutters">
+          <div class="col-6 img-bg d-none d-lg-block"><img class="lazy-bg" src="#" data-src="img/modal-1.jpg" alt=""/></div>
+          <div class="col">
+            <div class="form-wrap__title">Введите ваш номер телефона,
+            </div>
+            <div class="form-wrap__text form-wrap__text--js">и офис-менеджер Наталья  позвонит вам сейчас или в удобное для звонка время 
+            </div>
+            <input class="utm_source" type="hidden" name="utm_source"/>
+            <input class="utm_term" type="hidden" name="utm_term"/>
+            <input class="order" type="hidden" name="order" value="Заказать звонок"/>
+            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="tel" placeholder="Введите ваш телефон" required="required" name="tel"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <label class="custom-input"> <input class="custom-input__input" type="checkbox" name="scr8-time"/><span class="custom-input__lab"></span><span class="custom-input__text custom-input__text--now">СЕЙЧАС</span><span class="custom-input__text custom-input__text--time">КО ВРЕМЕНИ</span>
+            </label>
+            <div class="toggle-block">
+              <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Например, среда, 12:00" name="time"/>
+              </div>
+              <!-- +e.input-wrap-->
+            </div>
+            <button class="form-wrap__btn btn-js" type="submit">Заказать звонок
+            </button>
+            <div class="toggle-block active">
+              <div class="form-wrap__polite text-center">
+                Нажимая кнопку &laquo;Заказать звонок&raquo;, вы соглашаетесь с <a class="tdu" href="#" target="_blank">условиями передачи дайнных</a>
+              </div>
+            </div>
           </div>
-          <p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут</p>
-        </div>
-        <div class="form-wrap__input-wrap form-group">
-          <label><span class="form-wrap__title">text</span><input class="form-wrap__input form-control" type="Ваше Имя" required="required"/>
-          </label>
-        </div>
-        <!-- +e.input-wrap-->
-        <div class="form-wrap__input-wrap form-group">
-          <label><span class="form-wrap__title">tel</span><input class="form-wrap__input form-control" type="Ваш телефон" required="required"/>
-          </label>
-        </div>
-        <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-block btn-warning mb-4" type="submit" value="Рассчитать"/>
-        <div class="form-wrap__polite">
-          <label class="custom-input"><input class="custom-input__input" type="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
-          </label>
         </div>
       </form>
     </div>
     <!-- #modal-call-->
+    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call2">
+      <form>
+        <div class="row no-gutters">
+          <div class="col-6 img-bg d-none d-lg-block"><img class="lazy-bg" src="#" data-src="img/modal-2.jpg" alt=""/></div>
+          <div class="col">
+            <div class="form-wrap__title">Введите ваш номер телефона,
+            </div>
+            <div class="form-wrap__text form-wrap__text--js">и Максим Александрович  позвонит вам сейчас или в удобное для звонка время
+            </div>
+            <input class="utm_source" type="hidden" name="utm_source"/>
+            <input class="utm_term" type="hidden" name="utm_term"/>
+            <input class="order" type="hidden" name="order" value="Остались вопросы?"/>
+            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="tel" placeholder="Введите ваш телефон" required="required" name="tel"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <label class="custom-input"> <input class="custom-input__input" type="checkbox" name="scr8-time"/><span class="custom-input__lab"></span><span class="custom-input__text custom-input__text--now">СЕЙЧАС</span><span class="custom-input__text custom-input__text--time">КО ВРЕМЕНИ</span>
+            </label>
+            <div class="toggle-block">
+              <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Например, среда, 12:00" name="time"/>
+              </div>
+              <!-- +e.input-wrap-->
+            </div>
+            <button class="form-wrap__btn btn-js" type="submit">Заказать звонок
+            </button>
+            <div class="toggle-block active">
+              <div class="form-wrap__polite text-center">
+                Нажимая кнопку &laquo;Заказать звонок&raquo;, вы соглашаетесь с <a class="tdu" href="#" target="_blank">условиями передачи дайнных</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- #modal-call2-->
+    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call3">
+      <form>
+        <div class="row no-gutters">
+          <div class="col-6 img-bg d-none d-lg-block"><img class="lazy-bg" src="#" data-src="img/modal-3.jpg" alt=""/></div>
+          <div class="col">
+            <div class="form-wrap__title">Введите ваш номер телефона,
+            </div>
+            <div class="form-wrap__text form-wrap__text--js">и&nbsp;директор ООО ПСК &laquo;Евразия&raquo; <br/>Андрей Владимирович<br/>позвонит вам в&nbsp;рабочее время<br/>с&nbsp;9:00 до&nbsp;16:00
+            </div>
+            <input class="utm_source" type="hidden" name="utm_source"/>
+            <input class="utm_term" type="hidden" name="utm_term"/>
+            <input class="order" type="hidden" name="order" value="Задать вопрос директору"/>
+            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="tel" placeholder="Введите ваш телефон" required="required" name="tel"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <button class="form-wrap__btn btn-js" type="submit">Заказать звонок
+            </button>
+            <div class="toggle-block active">
+              <div class="form-wrap__polite text-center">
+                Нажимая кнопку &laquo;Заказать звонок&raquo;, вы соглашаетесь с <a class="tdu" href="#" target="_blank">условиями передачи дайнных</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- #modal-call3-->
     <!-- modal-->
     <script src="js/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>

@@ -32,15 +32,109 @@ mixin modal()
 	//- 			.h3 Скоро с Вами свяжутся
 	//- 			br 
 
+	+form-wrap()(id="modal-sm" class="zoom-anim-dialog mfp-hide modal-win modal-form" )
+		.row.no-gutters
+			
+			.col
+				+e.modal-head
+					+e.title Мы получили ваши ответы
+					+e.text--js.text-secondary Для расчета стоимости требуется от 10 до 30 минут
+					+e.text--js Офис-менеджер  Наталья свяжется с вами по указанному номеру и сообщит примерную стоимость.
+					p Также за&nbsp;номером телефона закрепится скидка  в&nbsp;30&nbsp;000 рублей* и&nbsp;подарок&nbsp;&mdash; проект будущего дома*!
+					.small.text-secondary *При строительстве дома в нашей компании
+				input(type="hidden" class='utm_source' name='utm_source')
+				input(type="hidden" class='utm_term' name='utm_term')
+				input(type="hidden" class='order' name='order' value="Форма в квизе")
+				input(type="text" class='floor' name='floor' )
+				input(type="text" class='area' name='area' )
+				input(type="text" class='overlap' name='overlap' )
+				input(type="text" class='fasade' name='fasade' )
+				input(type="text" class='price' name='price' )
+				input(type="text" class='data' name='data' ) 
+				+input( 'tel','Введите ваш телефон')(required name='tel')
+				+b.LABEL.custom-input2
+					+e.INPUT.input(type='checkbox', name='sms', value='Да' )
+					+e.SPAN.lab
+					+e.SPAN.text Не могу говорить. Отправьте СМС
+				.toggle-block: +input( 'text','Например, среда, 12:00')(name='time')
+				+e.btn.btn-js(type='submit') Заказать звонок
+				.toggle-block.active: +e.polite.text-center Нажимая кнопку &laquo;Заказать звонок&raquo;, вы соглашаетесь с 
+					|
+					a.tdu(href="#" target="_blank") условиями передачи дайнных
+			.col-6.img-bg.d-none.d-lg-block
+				img.lazy-bg(src="#" data-src="img/quiz.jpg", alt="")
+	// #modal-sm
+	
 	+form-wrap()(id="modal-call" class="zoom-anim-dialog mfp-hide modal-win modal-form" )
-		.text-center
-			+e.title.h3.ttu Обратный звонок
-			p Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут
-		+input("text","Ваше Имя")(required) 
-		+input("tel","Ваш телефон")(required)
-		//- +input("email","Ваше email")(required)
-		//- +text( "Комментарий")
-		+e.INPUT.btn.btn.btn-block.btn-warning.mb-4(type="submit" value="Рассчитать") 
-		+polite()
+		.row.no-gutters
+			.col-6.img-bg.d-none.d-lg-block
+				img.lazy-bg(src="#" data-src="img/modal-1.jpg", alt="")
+			.col
+				+e.title Введите ваш номер телефона,
+				+e.text--js и офис-менеджер Наталья  позвонит вам сейчас или в удобное для звонка время 
+				input(type="hidden" class='utm_source' name='utm_source')
+				input(type="hidden" class='utm_term' name='utm_term')
+				input(type="hidden" class='order' name='order' value="Заказать звонок")
+				+input( 'tel','Введите ваш телефон')(required name='tel')
+				+b.LABEL.custom-input 
+					+e.INPUT.input(type='checkbox', name='scr8-time', )
+					+e.SPAN.lab
+					+e.SPAN.text--now СЕЙЧАС
+					+e.SPAN.text--time КО ВРЕМЕНИ
+				.toggle-block: +input( 'text','Например, среда, 12:00')(name='time')
+				+e.btn.btn-js(type='submit') Заказать звонок
+				.toggle-block.active: +e.polite.text-center Нажимая кнопку &laquo;Заказать звонок&raquo;, вы соглашаетесь с 
+					|
+					a.tdu(href="#" target="_blank") условиями передачи дайнных
 	// #modal-call
+	
+	+form-wrap()(id="modal-call2" class="zoom-anim-dialog mfp-hide modal-win modal-form" )
+		.row.no-gutters
+			.col-6.img-bg.d-none.d-lg-block
+				img.lazy-bg(src="#" data-src="img/modal-2.jpg", alt="")
+			.col
+				+e.title Введите ваш номер телефона,
+				+e.text--js и Максим Александрович  позвонит вам сейчас или в удобное для звонка время
+				input(type="hidden" class='utm_source' name='utm_source')
+				input(type="hidden" class='utm_term' name='utm_term')
+				input(type="hidden" class='order' name='order' value='Остались вопросы?')
+				+input( 'tel','Введите ваш телефон')(required name='tel')
+				+b.LABEL.custom-input 
+					+e.INPUT.input(type='checkbox', name='scr8-time', )
+					+e.SPAN.lab
+					+e.SPAN.text--now СЕЙЧАС
+					+e.SPAN.text--time КО ВРЕМЕНИ
+				.toggle-block: +input( 'text','Например, среда, 12:00')(name='time')
+				+e.btn.btn-js(type='submit') Заказать звонок
+				.toggle-block.active: +e.polite.text-center Нажимая кнопку &laquo;Заказать звонок&raquo;, вы соглашаетесь с 
+					|
+					a.tdu(href="#" target="_blank") условиями передачи дайнных
+	// #modal-call2
+
+	
+	+form-wrap()(id="modal-call3" class="zoom-anim-dialog mfp-hide modal-win modal-form" )
+		.row.no-gutters
+			.col-6.img-bg.d-none.d-lg-block
+				img.lazy-bg(src="#" data-src="img/modal-3.jpg", alt="")
+			.col
+				+e.title Введите ваш номер телефона,
+				+e.text--js и&nbsp;директор ООО ПСК &laquo;Евразия&raquo; 
+					br
+					| Андрей Владимирович
+					br
+					| позвонит вам в&nbsp;рабочее время
+					br
+					| с&nbsp;9:00 до&nbsp;16:00
+				input(type="hidden" class='utm_source' name='utm_source')
+				input(type="hidden" class='utm_term' name='utm_term')
+				input(type="hidden" class='order' name='order' value='Задать вопрос директору')
+				+input( 'tel','Введите ваш телефон')(required name='tel')
+				 
+				+e.btn.btn-js(type='submit') Заказать звонок
+				.toggle-block.active: +e.polite.text-center Нажимая кнопку &laquo;Заказать звонок&raquo;, вы соглашаетесь с 
+					|
+					a.tdu(href="#" target="_blank") условиями передачи дайнных
+	// #modal-call3
+
+
 	// modal
