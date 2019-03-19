@@ -260,11 +260,12 @@ jQuery(document).ready(function ($) {
 			el: '.scr2__ind',
 			type: 'custom',
 			renderCustom: function (swiper, current, total) {
-				var progress = '<div class="jsTestInd" style="width:' + current * 100 / 6 + '%"></div>';
 				if (current == 1) {
-
+					
+					var progress = '<div class="jsTestInd" style="width:' + current * 100 / 15 + '%"></div>';
 					var progresText = '<div class="jsTestCounter">Осталось 6 вопросов</div>'
 				} else {
+					var progress = '<div class="jsTestInd" style="width:' + (current - 1) * 100 / 6 + '%"></div>';
 					var progresText = '<div class="jsTestCounter">Вопрос ' + (current - 1) + '/' + (total - 1) + '</div>';
 				}
 				return progress + progresText;
@@ -451,9 +452,10 @@ jQuery(document).ready(function ($) {
 	$(".btn-js").each(function() {
 		var B = $(this);
 		var A, C, z, D;
+		 
 		setInterval(function() {
 				if (B.find(".animate-js").length === 0) {
-						B.prepend("<span class='animate-js'></span>");
+						B.prepend("<span class='animate-wrap'><span class='animate-js'></span></span>");
 				}
 				A = B.find(".animate-js");
 				A.removeClass("btn_animate");
@@ -542,4 +544,23 @@ var gets = (function() {
 		e.preventDefault();
 		$(this).hide().prev().find('li:hidden').slideDown();
 	})
+
+
+	if ($('div').is("#scene")) {
+
+		var scene = document.getElementById('scene');
+		var parallaxInstance = new Parallax(scene, {
+			relativeInput: true
+			
+		});
+	}
+	if ($('div').is("#scene2")) {
+
+		var scene = document.getElementById('scene2');
+		var parallaxInstance = new Parallax(scene, {
+			relativeInput: true
+			
+		});
+	}
+
 });

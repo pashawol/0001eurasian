@@ -5,7 +5,7 @@ mixin s-contact()
 			+b.section-title.text-center
 				h2 Приезжайте в наш офис, чтобы лично обсудить условия сотрудничества
 			+e.wrap: .row
-				.col-auto
+				+e.col.col-auto
 					+e.item.row 
 						.col-auto
 							img.lazy(src="#" data-src='img/mark.png', alt="")
@@ -15,7 +15,7 @@ mixin s-contact()
 							br 
 							| ул. Комсомольская, 5
 				
-				.col-auto
+				+e.col.col-auto
 					+e.item.row 
 						.col-auto
 							img.lazy(src="#" data-src='img/tel.png', alt="")
@@ -23,7 +23,7 @@ mixin s-contact()
 							.strong Звоните нам:
 							a.text-body(href="tel:8(3519)23-20-20") 8 (3519) 23-20-20
 				
-				.col-auto
+				+e.col.col-auto
 					+e.item.row 
 						.col-auto
 							img.lazy(src="#" data-src='img/clock.png', alt="")

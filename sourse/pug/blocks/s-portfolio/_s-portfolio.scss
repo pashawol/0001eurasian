@@ -33,9 +33,17 @@
 		max-width: 279px;
 		padding-bottom: 28px;
 	}
+	.resp-arrow{
+		display: none;
+	}
+	&__tab-btn{
+		display: flex;
+	}
+	.resp-accordion,
 	&__tab-btn{
 		@include mt;
 		cursor: pointer;
+		margin-bottom: 0;
 		&:first-child{
 			
 			border-radius: 5px 5px 0 0;
@@ -47,7 +55,7 @@
 		&:not(:last-child){
 			border-bottom: 1px solid #dbdbdb;
 		}
-		&:hover,
+		// &:hover,
 		&.resp-tab-active{
 			border-bottom-color: #ffdb72;
 			background-image: linear-gradient(to top, $primary 0%, #fdd467 79%, #ffdb72 99%, #ffdb72 100%);
@@ -60,7 +68,7 @@
 		height: 116px;
 		padding-left: 20px;
 		background-color: #f9f9f9;
-		display: flex;
+	
 		flex-direction: column;
 		justify-content: center;
 	}

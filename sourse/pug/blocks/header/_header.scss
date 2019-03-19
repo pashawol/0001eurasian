@@ -1,10 +1,7 @@
 .header{
   @include bgs;
-  // background-color: #cbe0f4;
-  &.visible{
-    background-image: url(../img/head-bg.jpg);
-		
-  }
+ 
+    background-image: url(../img/head-bg.jpg); 
 	
   // 
   @include media-breakpoint-up(xl) {}

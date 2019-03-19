@@ -91,7 +91,12 @@ a{
 		@include media-breakpoint-up(md) {}
 	}
 	&__text{
-		font-size: em(8);
+		@include media-breakpoint-up(sm) {
+
+			font-size: em(8);
+		}
+		font-size: em(11);
+		line-height: (32 / 23);
 	
 	}
 }

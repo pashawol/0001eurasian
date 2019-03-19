@@ -1,27 +1,12 @@
 .s-differ {
 	background-color: rgba(255, 255, 255, 0.35);
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-up(xl) {
 
 		padding-bottom: 0 !important;
 	}
 	padding-bottom: 80px;
-	position: relative;
-	&.visible{
-		background-image: url(../img/director-bg.jpg);
-			&::before{
-				content: '';
-				position: absolute;
-				left: 0;
-				width: 100%;
-				bottom: -60px;
-				height: 331px;
-				pointer-events: none;
-				background-image: url(../img/differ-after.png);
-				background-size: cover;
-				background-position: top center;
-				z-index: 4;
-			}
-		}
+	position: relative; 
+		background-image: url(../img/director-bg.jpg); 
 		.section-title{
 			@include media-breakpoint-up(xl) {
 		
@@ -32,6 +17,7 @@
 			 
 				padding-bottom: 35px;
 			}
+			padding-bottom: 25px;
 		}
 		.h6{
 			max-width: 510px;
@@ -41,43 +27,43 @@
 			}
 	
 		}
-		&__btn{
-			cursor: pointer;
-			@extend .btn;
-			@extend .btn-primary;
-			@extend .btn-block;
-			@include media-breakpoint-up(lg) {
-
-				margin-top: 7rem;
-			}
-			// margin-top: 2rem;
-
-			margin-bottom: 30px;
-			margin-left: auto;
-			margin-right: auto;
-			max-width: 346px;
-			padding: rem(10) rem(10);
-			div{
-				font-weight: normal;
-			}
-		}
+ 
 		&__foot{
 			font-size: 12px;
 			padding-bottom: 40px;
 		}
-		
+		z-index: 2;
 		&__img-wrap{
 			text-align: center;
-			@include media-breakpoint-up(md) {
+			z-index: -1;
+			position: relative;	
+			@include media-breakpoint-up(lg) {
 				
 				margin-left: -118px;
 				margin-right: -130px;
+				margin-top: 0;
 			}
+			
+			@include media-breakpoint-up(md) {
+				
+				margin-left: -188px;
+				margin-right: -220px;
+			}
+			margin-top: 30px;
+				@include media-breakpoint-up(sm) {
+			margin-left: -240px;
+		}
+		margin-left: -120px;
+		 
 			img{
 				@include media-breakpoint-up(md) {
 						max-width: 100%;
 					}
-					max-width: 320px;
+					@include media-breakpoint-up(sm) {
+
+						max-width: 480px;
+					}
+					max-width: 440px;
 				}
 			
 		}

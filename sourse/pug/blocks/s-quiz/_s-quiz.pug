@@ -4,11 +4,11 @@ mixin s-quiz()
 		.container
 			+b.section-title
 				.row
-					.col-auto
+					.col-sm-auto
 						h2 Пройдите тест  из&nbsp;6&nbsp;вопросов
 					.col
-						+e.text  и&nbsp;узнайте стоимость  вашего будущего дома
-						.small Время прохождения теста 1&nbsp;мин.
+						+e.text.text-secondary  и&nbsp;узнайте стоимость  вашего будущего дома
+						.small.text-lighter Время прохождения теста 1&nbsp;мин.
 			
 			+e.inner
 				.scr2__test
@@ -24,8 +24,8 @@ mixin s-quiz()
 									mixin foot(p)
 										+e.foot
 											.row
-												.col-sm-auto.text-center
-													+e.person: img.lazy(src="#" data-src='img/quiz-face.png', alt='')
+												.col-sm-auto.col-6.text-center
+													+e.person: img.res-i(src='img/quiz-face.png', alt='')
 													+e.strong.strong Андрей
 														br
 														| Владимирович
@@ -39,8 +39,8 @@ mixin s-quiz()
 											block
 											+e.foot
 												.row
-													.col-sm-auto.text-center
-														+e.person: img.lazy(src="#" data-src='img/quiz-face.png', alt='')
+													.col-sm-auto.col-6.text-center
+														+e.person: img.res-i(src='img/quiz-face.png', alt='')
 														+e.strong.strong Андрей
 															br
 															| Владимирович
@@ -54,43 +54,45 @@ mixin s-quiz()
 									
 									//- 0
 									.swiper-slide
-										.scr2__testttl По результатам теста вы получите:
-										
-										.scr2__ansers.row.justify-content-around
-											.col-sm-6.col-md-auto
-												.scr2__imglabel.scr2__imglabel--start
-													 
-													span.flexwrap
-														+e.SPAN.img-wrap: img.lazy(src="#" data-src='img/quiz-step-0-1.png', alt='')
-														small.strong Проект будущего дома в&nbsp;подарок*
-														+e.small-text *При строительстве дома в&nbsp;нашей компании.  Стоимость за&nbsp;проект компенсируется  во&nbsp;время строительства.
-											.col-sm-6.col-md-auto
-												.scr2__imglabel.scr2__imglabel--start
-													
-													span.flexwrap
-														+e.SPAN.img-wrap: img.lazy(src="#" data-src='img/quiz-step-0-2.png', alt='')
-														small.strong 30&nbsp;000 рублей за&nbsp;экономию времени наших менеджров**
-														+e.small-text **При строительстве дома в&nbsp;нашей компании,  делается дополнительная в&nbsp;размере 30&nbsp;000 рублей от&nbsp;суммы основного договора
+										+e.first-title По результатам теста вы получите:
+										.scr2__ansers-wrap
+											.scr2__ansers.row.justify-content-around
+												.col-6
+													.scr2__imglabel.scr2__imglabel--start
+														
+														span.flexwrap
+															+e.SPAN.img-wrap: img.res-i(src='img/quiz-step-0-1.png', alt='')
+															small.strong.mb-3 Проект будущего дома в&nbsp;подарок*
+															+e.small-text *При строительстве дома в&nbsp;нашей компании.  Стоимость за&nbsp;проект компенсируется  во&nbsp;время строительства.
+												.col-6
+													.scr2__imglabel.scr2__imglabel--start
+														
+														span.flexwrap
+															+e.SPAN.img-wrap: img.res-i(src='img/quiz-step-0-2.png', alt='')
+															small.strong.mb-3 30&nbsp;000 рублей за&nbsp;экономию времени наших менеджров**
+															+e.small-text **При строительстве дома в&nbsp;нашей компании,  делается дополнительная в&nbsp;размере 30&nbsp;000 рублей от&nbsp;суммы основного договора
 										.scr2__next
 											button.button.btn-js.btn-start.jsNextQuest( ) Пройти тест и узнать стоимость
 												 
 												small.d-block вашего будущего дома
+
+											//- a.button.btn-js.jsEnd.popup-with-move-anim(href="#modal-sm" disabled='' data-step="step-6") Завершить тест
 									// /.swiper-slide
 									
 									//- 1
 									+slide('Выберите этажность своего будущего дома', '«Одноэтажный дом удобен отсутствием лестниц, которые представляют опасность для детей и неудобство для пожилых жильцов. При устройстве двухэтажного дома — остается больше прилегающей территории, на которой можно разместить дополнительные постройки, такие как баня, хоз. блок и другие»','step-1') 
 										.scr2__ansers.row.justify-content-center
-											.col-sm-6.col-md-auto
+											.col-sm-auto.col-6
 												label.scr2__imglabel
 													input(type='radio', name='quest1', value='Одноэтажный')
 													span.flexwrap
-														+e.SPAN.img-wrap: img.lazy(src="#" data-src='img/quiz-step-1-1.png', alt='')
+														+e.SPAN.img-wrap: img.res-i(src='img/quiz-step-1-1.png', alt='')
 														small Одноэтажный
-											.col-sm-6.col-md-auto
+											.col-sm-auto.col-6
 												label.scr2__imglabel
 													input(type='radio', name='quest1', value='Двухэтажный')
 													span.flexwrap
-														+e.SPAN.img-wrap: img.lazy(src="#" data-src='img/quiz-step-1-2.png', alt='')
+														+e.SPAN.img-wrap: img.res-i(src='img/quiz-step-1-2.png', alt='')
 														small Двухэтажный
 									//- 2
 									+slide('Выберите площадь своего будущего дома', '«Цена зависит не только от площади дома. Есть проекты, где дом 119 метров и 217 стоят одинаково. Важно еще учесть личные предпочтения. Отделка, ремонт, мебель — тоже стоят денег»','step-2') 
@@ -100,38 +102,38 @@ mixin s-quiz()
 									//- 3
 									+slide('Выберите тип перекрытия', '«У железобетонного перекрытия лучше противопожарные свойства и звукоизоляция, а так же выше скорость монтажа. При устройстве деревянного перекрытия  — вы экономите значительную часть средств»','step-3') 
 										.scr2__ansers.row.justify-content-center
-											.col-sm-6.col-md-auto
+											.col-sm-auto.col-6
 												label.scr2__imglabel
 													input(type='radio', name='quest3', value='деревянное')
 													span.flexwrap
-														+e.SPAN.img-wrap: img.lazy(src="#" data-src='img/quiz-step-3-1.png', alt='')
+														+e.SPAN.img-wrap: img.res-i(src='img/quiz-step-3-1.png', alt='')
 														small Деревянное
-											.col-sm-6.col-md-auto
+											.col-sm-auto.col-6
 												label.scr2__imglabel
 													input(type='radio', name='quest3', value='Железобетонное')
 													span.flexwrap
-														+e.SPAN.img-wrap: img.lazy(src="#" data-src='img/quiz-step-3-2.png', alt='')
+														+e.SPAN.img-wrap: img.res-i(src='img/quiz-step-3-2.png', alt='')
 														small Железобетонное
 									//- 4
 									+slide('Выберите тип фасада', 'Облицовочный кирпич дорогой, но долговечный — дом будет смотреться красиво  и богато. Штукатурка может быть любого цвета и фактуры, минусом является обслуживание через определенное время. Навесной фасад —самый бюджетный вариант, скорость его монтажа гораздо выше. Возможен монтаж в зимний период.','step-4') 
 										.scr2__ansers.row.justify-content-center
-											.col-sm-6.col-md-auto
+											.col-sm-auto.col-6
 												label.scr2__imglabel
 													input(type='radio', name='quest4', value='Облицовочный кирпич')
 													span.flexwrap
-														+e.SPAN.img-wrap: img.lazy(src="#" data-src='img/quiz-step-4-1.png', alt='')
+														+e.SPAN.img-wrap: img.res-i(src='img/quiz-step-4-1.png', alt='')
 														small Облицовочный кирпич
-											.col-sm-6.col-md-auto
+											.col-sm-auto.col-6
 												label.scr2__imglabel
 													input(type='radio', name='quest4', value='Штукатурка')
 													span.flexwrap
-														+e.SPAN.img-wrap: img.lazy(src="#" data-src='img/quiz-step-4-2.png', alt='')
+														+e.SPAN.img-wrap: img.res-i(src='img/quiz-step-4-2.png', alt='')
 														small Штукатурка
-											.col-sm-6.col-md-auto
+											.col-sm-auto.col-6
 												label.scr2__imglabel
 													input(type='radio', name='quest4', value='Навесной (сайдинг)')
 													span.flexwrap
-														+e.SPAN.img-wrap: img.lazy(src="#" data-src='img/quiz-step-4-3.png', alt='')
+														+e.SPAN.img-wrap: img.res-i(src='img/quiz-step-4-3.png', alt='')
 														small Навесной (сайдинг)
 
 									//- 5
@@ -150,7 +152,7 @@ mixin s-quiz()
 										+e.foot
 												.row
 													.col-sm-auto.text-center
-														+e.person: img.lazy(src="#" data-src='img/quiz-face.png', alt='')
+														+e.person: img.res-i(src='img/quiz-face.png', alt='')
 														+e.strong.strong Андрей
 															br
 															| Владимирович

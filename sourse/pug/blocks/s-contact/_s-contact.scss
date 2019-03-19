@@ -3,12 +3,30 @@
 	position: relative;
 	border: none;
 	z-index: 4;
+	position: relative; 
+			&::before{
+				content: '';
+				position: absolute;
+				left: 0;
+				width: 100%;
+				bottom: calc(100% - 60px);
+				height: 331px;
+				pointer-events: none;
+				background-image: url(../img/differ-after.png);
+				background-size: cover;
+				background-position: top center;
+				z-index: -1;
+			} 
 	//
 	.section-title{
 		padding-bottom: 42px;
 	}
 	.row{
-		justify-content: space-around;
+		@include media-breakpoint-up(sm) {
+
+			justify-content: space-around;
+		}
+		justify-content: center;
 	}
 	&__wrap{
 		margin-left: auto;
@@ -50,6 +68,13 @@
 	@include media-breakpoint-down(lg) {}
 	@include media-breakpoint-down(md) {}
 	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	@include media-breakpoint-down(xs) {
+		&__col{
+			width: 280px;
+			.col-auto{
+				width: 50px;
+			}
+		}
+	} 
 
 }

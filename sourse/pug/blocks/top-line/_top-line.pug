@@ -5,7 +5,7 @@ mixin top-line()
 			.row.align-items-end
 				.col-lg-auto.col
 					+e.logo
-						img.res-i(src="img/logo.png", alt="")
+						a(href="/"): img.res-i(src="img/logo.png", alt="")
 				.col-lg.col-auto
 					.row.align-items-center
 						.col-auto.d-none.d-lg-block
@@ -14,7 +14,7 @@ mixin top-line()
 							+e.text--mark г. Магнитогорск Комсомольская, 5
 						.col-auto
 							+e.tel(href="tel:8(3519)23-20-20") 
-								+e.SPAN.text 8 (3519) 23-20-20
+								+e.SPAN.btn-text 8 (3519) 23-20-20
 								+e.icon-wrap
 									+icon('tel')
 

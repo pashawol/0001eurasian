@@ -41,7 +41,35 @@
 			margin-bottom: rem(20);
 		}
 	//
-	@include media-breakpoint-up(xl) {}
+	position: relative;
+	z-index: 2;
+	.scene{
+		// .scene
+		position: absolute !important;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: -1;
+	}
+	&__elem{
+		position: absolute;
+		&--1{
+			top: 62% !important;
+			left: -20px !important; 
+		}
+		
+		&--2{
+			right: -10px !important;
+			top: 54% !important;
+			left:  auto !important; 
+		}
+
+	}
+	@include media-breakpoint-up(xl) {
+	 
+	}
+
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {}
@@ -63,6 +91,10 @@
 	@include media-breakpoint-down(lg) {}
 	@include media-breakpoint-down(md) {}
 	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	@include media-breakpoint-down(sm) {
+		.section-title{
+			padding-bottom: 20px;
+		}
+	} 
 
 }

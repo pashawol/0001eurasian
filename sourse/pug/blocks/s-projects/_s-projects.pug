@@ -1,6 +1,13 @@
 mixin s-projects()
 	// start s-projects
 	+b.s-projects.section#s-projects.lazy-background&attributes(attributes)
+			
+		.scene-wrap.d-none.d-md-block
+			.scene(id="scene2") 
+				+e.elem--1.--js(data-depth="0.1")
+					img(src="img/s-project-1.jpg", alt="")
+				+e.elem--2.--js(data-depth="0.2")
+					img(src="img/s-project-2.jpg", alt="")
 		.container
 			+b.section-title.text-center
 				h2 У вас еще нет проекта дома вашей мечты?

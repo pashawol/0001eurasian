@@ -1,0 +1,28 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-why/_s-why.pug
+include ../blocks/s-quiz/_s-quiz.pug
+include ../blocks/s-portfolio/_s-portfolio.pug
+include ../blocks/s-steps/_s-steps.pug
+include ../blocks/s-team/_s-team.pug
+include ../blocks/s-projects/_s-projects.pug
+include ../blocks/s-director/_s-director.pug
+include ../blocks/s-accord/_s-accord.pug
+include ../blocks/s-differ/_s-differ.pug
+include ../blocks/s-contact/_s-contact.pug
+
+block title
+	title Благодарим за доверие
+
+block pagecontent
+	
+	//- +mob-mnu()
+	header.header(style='background-image: url(img/thank-bg.jpg);')
+		+top-line() 
+		+s-director-thanks 
+	+s-contact()
+	+footer()
+	
+	

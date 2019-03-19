@@ -40,7 +40,13 @@ mixin modal()
 					+e.title Мы получили ваши ответы
 					+e.text--js.text-secondary Для расчета стоимости требуется от 10 до 30 минут
 					+e.text--js Офис-менеджер  Наталья свяжется с вами по указанному номеру и сообщит примерную стоимость.
-					p Также за&nbsp;номером телефона закрепится скидка  в&nbsp;30&nbsp;000 рублей* и&nbsp;подарок&nbsp;&mdash; проект будущего дома*!
+					p Также за&nbsp;номером телефона закрепится скидка  
+						br
+						strong в&nbsp;30&nbsp;000 рублей*
+						|
+						|  и&nbsp;подарок&nbsp;&mdash; 
+						|
+						strong проект будущего дома*!
 					.small.text-secondary *При строительстве дома в нашей компании
 				input(type="hidden" class='utm_source' name='utm_source')
 				input(type="hidden" class='utm_term' name='utm_term')
@@ -60,7 +66,7 @@ mixin modal()
 				+e.btn.btn-js(type='submit') Заказать звонок
 				.toggle-block.active: +e.polite.text-center Нажимая кнопку &laquo;Заказать звонок&raquo;, вы соглашаетесь с 
 					|
-					a.tdu(href="#" target="_blank") условиями передачи дайнных
+					a.tdu(href="#" target="_blank").e условиями передачи дайнных
 			.col-6.img-bg.d-none.d-lg-block
 				img.lazy-bg(src="#" data-src="img/quiz.jpg", alt="")
 	// #modal-sm
@@ -97,7 +103,7 @@ mixin modal()
 				+e.text--js и Максим Александрович  позвонит вам сейчас или в удобное для звонка время
 				input(type="hidden" class='utm_source' name='utm_source')
 				input(type="hidden" class='utm_term' name='utm_term')
-				input(type="hidden" class='order' name='order' value='Остались вопросы?')
+				input(type="hidden" class='order' name='order' value='Перезвонить Максиму Александровичу')
 				+input( 'tel','Введите ваш телефон')(required name='tel')
 				+b.LABEL.custom-input 
 					+e.INPUT.input(type='checkbox', name='scr8-time', )

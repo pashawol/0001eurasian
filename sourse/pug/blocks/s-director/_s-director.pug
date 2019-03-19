@@ -34,3 +34,49 @@ mixin s-director()
 						+e.img-wrap
 							img.res-i.lazy(src="#" data-src="img/director.png", alt="")
 	// end s-director
+
+
+mixin s-director-thanks()
+	// start s-director
+	+b.s-director--thanks.section
+		.container
+			.row
+				.col-lg-6.col-md-8
+					+b.section-title
+						h2 
+							span.text-primary Благодарим за&nbsp;доверие,
+							|
+							| проявленное к&nbsp;нашей 
+							br
+							| компании! 
+						
+
+					.h6 Если у вас срочный вопрос, звоните нам по телефону:  
+						|
+						.strong.pt-3
+							+e.link.text-body(href="tel:8(3519)23-20-20") 
+								img.mr-1(src="img/call.png", alt="") 
+								| 
+								| 8 (3519) 23-20-20
+					
+					.h6 Проекты домов можно посмотреть тут: 
+						|
+						.strong.pt-3
+							+e.link.text-body(href="p.eadom.ru") 
+								img.mr-1(src="img/web.png", alt="")  
+								| 
+								| p.eadom.ru
+
+			 
+				.col.align-self-end
+					+e.right-block
+						+e.name-block
+							+e.name Андрей Владимирович
+							+e.post Генеральный дирекор
+								br
+								| ООО ПСК «Евразия»
+						+e.img-wrap
+							img.res-i(src="img/director.png", alt="")
+	// end s-director
+
+

@@ -1,9 +1,8 @@
 .s-director {
 	background-color: rgba(255, 255, 255, 0.35);
 	padding-bottom: 0 !important;
-		&.visible{
-			background-image: url(../img/director-bg.jpg);
-		}
+		 
+			background-image: url(../img/director-bg.jpg); 
 		.section-title{
 			@include media-breakpoint-up(xl) {
 		
@@ -16,6 +15,7 @@
 			}
 		}
 		.h6{
+			
 			max-width: 510px;
 			line-height: 1.4;	
 			@include media-breakpoint-up(md) {
@@ -33,6 +33,9 @@
 			@extend .btn;
 			@extend .btn-primary;
 			@extend .btn-block;
+			@include media-breakpoint-down(xs) {
+				font-size: 16px;
+			}
 			@include media-breakpoint-up(lg) {
 
 				margin-top: 7rem;
@@ -55,16 +58,30 @@
 		
 		&__img-wrap{
 			text-align: center;
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(lg) {
 				
 				margin-left: -42px;
 				margin-right: -78px;
 			}
+			
+			@include media-breakpoint-up(md) {
+				
+				margin-left: -102px;
+				margin-right: -148px;
+			}
+							@include media-breakpoint-up(sm) {
+			margin-right: -240px;
+		}
+		margin-right: -180px;
 			img{
 				@include media-breakpoint-up(md) {
 						max-width: 100%;
 					}
-					max-width: 320px;
+					@include media-breakpoint-up(sm) {
+
+						max-width: 480px;
+					}
+					max-width: 410px;
 				}
 			
 		}
@@ -136,6 +153,15 @@
 				
 			}	
 		}
+
+		&--thanks {
+			background-color: transparent;
+
+			padding-top: 60px;
+			.h6{
+				margin-bottom: 20px;
+			}
+		}
 		//
 	@include media-breakpoint-up(xl) {
 		
@@ -162,5 +188,12 @@
 	@include media-breakpoint-down(md) {}
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
-
+	@include media-breakpoint-down(sm) {
+		&__btn{
+			margin-top: 20px;
+		}
+	.section-title {
+			padding-bottom: .5em;
+		}
+	}
 }

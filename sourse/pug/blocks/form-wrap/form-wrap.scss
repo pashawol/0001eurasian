@@ -6,6 +6,10 @@
 		//  outline: 0 !important;
 		 resize: none;
 		 font-size: 18px;
+		 @include media-breakpoint-down(xs) {
+			 padding-left: 10px;
+			 padding-right: 10px;
+		 }
  	}
  	&__btn{
 		 cursor: pointer;

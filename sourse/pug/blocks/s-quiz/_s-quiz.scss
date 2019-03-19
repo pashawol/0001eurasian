@@ -8,8 +8,15 @@
 		// &.visible{
 		
 		// }
-
+		&__first-title{
+			text-align: center;
+			padding-top: 56px;
+			color: #0d0d0d;
+		}
 		&__foot{
+			@include media-breakpoint-down(md) {
+				display: none;
+			}
 			max-width: 760px;
 			margin-left: auto;
 			margin-right: auto;
@@ -26,14 +33,24 @@
 			font-size: 11px;
 		}
 		h2{
-			max-width: 330px;
+			@include media-breakpoint-up(md) {
+				
+				max-width: 330px;
+			}
+						@include media-breakpoint-up(sm) {
+
+							max-width: 240px;
+						}
 		}
 	//
 	.section-title{
 		&__text{
 			padding-top: em(6);
-			margin-bottom: em(16);
-			max-width: 254px;
+			margin-bottom: em(6);
+			@include media-breakpoint-up(sm) {
+
+				max-width: 254px;
+			}
 		}
 	}
 
@@ -70,6 +87,16 @@
 			@media only screen and (min-width:1020px){
 			 &::before{ 
 				 background:url(../img/quiz-after.png) center center no-repeat; 
+				}
+				&::after{
+					content: '';
+					background-image: url(../img/quiz-before.png);
+					bottom: -60px;
+					z-index: -2;
+					left: -100px;
+					width: 287px;
+					height: 214px;
+					position: absolute;
 				}
 			}
 			
@@ -186,6 +213,7 @@ display:none;
 	overflow: hidden;
 	background:url(../img/loadbar.png) left center no-repeat;
 	background-size: cover;
+	@include mt;
 }
  
 .scr2__testttl{
@@ -199,16 +227,23 @@ display:none;
 }
 .scr2__ansers{
 	padding-top: 30px;
+	@include media-breakpoint-down(xs) {
+		@include roww(5)
+	}
 }
 .scr2__imglabel{
 	display: block;
 	@include media-breakpoint-up(lg) {
 
-		min-height: 220px;
+		// min-height: 220px;
 		margin-bottom: 30px;
 	}
 	margin-bottom: 10px;
-	min-height: 200px;
+	@include media-breakpoint-up(md) {
+
+		// min-height: 200px;
+	}
+	min-height: 180px;
 	cursor: pointer;
 	max-width: 215px;
 	margin-left: auto;
@@ -216,6 +251,9 @@ display:none;
 	position: relative;
 	&--start{
 		max-width: 260px;
+		img{
+			opacity: 1 !important;
+		}
 	}
 }
 .scr2__imglabel>input{
@@ -344,6 +382,13 @@ display:none;
 	border-color: #dcdcdc !important;
 	box-shadow: none;
 	cursor: auto;
+	span{
+		display: none !important;
+	}
+	&::after,
+	&::before{
+		opacity: 0;
+	}
 }
 
 .button{
@@ -424,4 +469,19 @@ left: 0 !important;
 	background: #9dd677;
 	border-color: #9dd677;
 	box-shadow: none;
+}
+
+.scr2__ansers-wrap{
+	max-width: 680px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.text-lighter{
+	color: #858585;
+}
+
+
+small.strong.mb-3{
+	line-height: (24 / 17);
 }

@@ -49,7 +49,7 @@ mixin s-steps()
 								input(type='hidden', class="order", name='Вид формы', value=`Запишитесь на встречу  в нашем офисе` ) 
 								input(type="hidden" class='utm_source' name='utm_source')
 								input(type="hidden" class='utm_term' name='utm_term')
-								+inputt('Введите удобный день и время','text','Например, среда, 12:00')(name='time')
+								+inputt('Введите удобный день и время','text','Например, среда, 12:00')(name='time-v')
 								+inputt('Укажите ваш телефон для связи','tel','Введите ваш телефон')(required name='tel')
 								+e.btn.btn-js(type='submit') Записаться на встречу
 									

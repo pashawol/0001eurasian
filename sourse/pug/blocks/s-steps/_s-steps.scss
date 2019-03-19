@@ -47,7 +47,7 @@
 			letter-spacing: 0.32px;
 			@include mt;
 			cursor: pointer;
-			&:hover,
+			// &:hover,
 			&.swiper-slide-thumb-active{
 				background-color: #ffdb72;
 				background-image: linear-gradient(to top, $primary 0%, #fdd467 79%, #ffdb72 99%, #ffdb72 100%);
@@ -62,15 +62,20 @@
 			}
 		}
 		&__slider-head{
-			margin-bottom: 41px;
+			margin-bottom: 61px;
 		}
 		&__title{
 			font-size: 25px;
 			font-weight: 700;
-			line-height: $h5-font-size;
+			line-height: 1.4;
 			// Text style for "Вы приезжа"
 			letter-spacing: 0.5px;
-			margin-bottom: 0.5rem;
+			@include media-breakpoint-up(md) {
+
+				margin-bottom: 0.5rem;
+			}
+			margin-bottom: 1rem;
+
 			&--pt{
 				@include media-breakpoint-up(xl) {
 
@@ -131,6 +136,7 @@
 				padding: 40px 60px;
 				max-width: 476px;
 			}
+			max-width: 476px;
 			@include media-breakpoint-up(sm){
 
 				padding: 30px 40px;
@@ -232,7 +238,14 @@
 	@include media-breakpoint-down(xl) {}
 	@include media-breakpoint-down(lg) {}
 	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(sm) {
+		h2{
+			margin-bottom: 15px;
+		}
+	}
 	@include media-breakpoint-down(xs) {} 
 
+}
+.swiper-button-hand{
+	outline: none !important;
 }

@@ -60,7 +60,7 @@
 			line-height: 1.2;
 		}
 		&__text{
-			color: $secondary; 
+			// color: $secondary; 
 			@include media-breakpoint-up(sm) {
 
 				font-size: $h6-font-size; 
@@ -73,6 +73,8 @@
 			border: 1px solid #dbdbdb;
 			font-size: 18px;
 			padding: 27px 60px;
+	 
+			padding-right: 10px;
 		}
 
 		&__btn{

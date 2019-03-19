@@ -12,7 +12,7 @@ $mail->CharSet = 'utf-8';
 ///от кого письмо  
 $mail->setFrom('info@info.com');
 
- $mail->addAddress('wol1414@gmail.com');
+ $mail->addAddress('spike.mgn@gmail.com');
  // $mail->addAddress('horenkova369@gmail.com');
 // $mail->addAddress('stab@inbox.support');
 
@@ -37,10 +37,11 @@ $html = '
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Время для звонка:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['time'] . '</b></td>';
     }
     
-    if (!empty($_POST['time'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Время для звонка:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['time'] . '</b></td>';
+    if (!empty($_POST['time-v'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Время для встречи:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['time-v'] . '</b></td>';
     }
 
+ 
     
     if (!empty($_POST['floor'])) {
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Количество этажей:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['floor'] . '</b></td>';
